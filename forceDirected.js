@@ -1,6 +1,12 @@
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+jQuery(document).ready(function() {
+
+width = 960;
+height = 700;
+
+var svg = d3.select("#viz")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);  
 
 var color = d3.scaleOrdinal()                                                       //set node color below
     .domain(["Venetian Colonial","Venetian Citizen", "Ottoman", "Unknown","Other"])
@@ -13,7 +19,7 @@ var simulation = d3.forceSimulation()
     .force("y", d3.forceY(height/2));
 
 
-d3.json("viz1.json", function(error, graph) {                                       //set input data file here
+d3.json("https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/viz1.json", function(error, graph) {                                       //set input data file here
   if (error) throw error;
 
   var link = svg.append("g")
@@ -103,3 +109,6 @@ var legendSequential = d3.legendColor()
   
 svg.select(".legendSequential")
     .call(legendSequential); 
+
+
+});
