@@ -139,3 +139,25 @@ var alignment = 20,
     lineY = circleY-7*alignment
     lineTextX = lineX + 25,
     lineTextY = lineY + 5;
+    
+// subjecthood by color
+svg.append("circle").attr("cx",circleX).attr("cy",circleY-5*alignment).attr("r", 6).style("fill", "#5983D9");
+svg.append("circle").attr("cx",circleX).attr("cy",circleY-4*alignment).attr("r", 6).style("fill", "#A63D33");
+svg.append("circle").attr("cx",circleX).attr("cy",circleY-3*alignment).attr("r", 6).style("fill", "#D9AE89");
+svg.append("circle").attr("cx",circleX).attr("cy",circleY-2*alignment).attr("r", 6).style("fill", "#45554E");
+svg.append("circle").attr("cx",circleX).attr("cy",circleY-1*alignment).attr("r", 6).style("fill", "#593640");
+svg.append("text").attr("x", circleTextX).attr("y", circleTextY-5*alignment).text("Venetian Colonial").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", circleTextX).attr("y", circleTextY-4*alignment).text("Venetian Citizen").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", circleTextX).attr("y", circleTextY-3*alignment).text("Ottoman").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", circleTextX).attr("y", circleTextY-2*alignment).text("Unkown").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", circleTextX).attr("y", circleTextY-1*alignment).text("Other").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", circleX).attr("y", circleY-6*alignment).text("Subjecthood by color: ").style("font-size", "15px").attr("alignment-baseline","middle");
+
+// marriage link
+svg.append("line").attr("x1",lineX).attr("y1",lineY-3*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-3*alignment).attr("stroke-width", 1*3.8).attr("stroke", "#b3b3b3");
+svg.append("line").attr("x1",lineX).attr("y1",lineY-2*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-2*alignment).attr("stroke-width", 2*3.8).attr("stroke", "#b3b3b3");
+svg.append("line").attr("x1",lineX).attr("y1",lineY-1*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-1*alignment).attr("stroke-width", 3*3.8).attr("stroke", "#b3b3b3");
+svg.append("text").attr("x", lineTextX).attr("y", lineTextY-3*alignment).text("1 marriage").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", lineTextX).attr("y", lineTextY-2*alignment).text("2 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", lineTextX).attr("y", lineTextY-1*alignment).text("3 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", lineX).attr("y", lineY-4*alignment).text("Marriage ties: ").style("font-size", "15px").attr("alignment-baseline","middle");
