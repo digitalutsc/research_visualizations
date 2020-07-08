@@ -161,3 +161,5 @@ svg.append("text").attr("x", lineTextX).attr("y", lineTextY-3*alignment).text("1
 svg.append("text").attr("x", lineTextX).attr("y", lineTextY-2*alignment).text("2 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
 svg.append("text").attr("x", lineTextX).attr("y", lineTextY-1*alignment).text("3 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
 svg.append("text").attr("x", lineX).attr("y", lineY-4*alignment).text("Marriage ties: ").style("font-size", "15px").attr("alignment-baseline","middle");
+
+});
