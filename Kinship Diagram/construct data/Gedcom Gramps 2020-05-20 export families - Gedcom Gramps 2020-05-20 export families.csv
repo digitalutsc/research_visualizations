@@ -1,0 +1,169 @@
+FamilyID,HusbandID,Husband,WifeID,Wife,Marriage,Location,Children,FamilySize,HusbandSurname,HusbandForenames,WifeSurname,WifeForenames,MaritalStatus
+F0000,I0000,Gianesin Salvago (b.BEF 1515),,,,Unknown,"I0001: Mateca Salvago (b. BEF 1550), I0002: Zuria Salvago (b. ABT 1600)",3,Salvago,Gianesin,,,Single
+F0001,I0001,Mateca Salvago (b.BEF 1550),I0004,Caterina Gagliano (b. UNKNOWN),,Unknown,"I0003: Gianesin Salvago (b. BEF 1570), I0005: Giulian Salvago (b. BEF 1585), I0007: Benetto Salvago (b. UNKNOWN), I0006: Giovanni Battista Salvago (b. ABT 1587)",6,Salvago,Mateca,Gagliano,Caterina,Single
+F0002,I0007,Benetto Salvago (b.UNKNOWN),I0009,Caterina Piron (b. BEF 1590),,Unknown,"I0011: Gioia Salvago (b. BEF 1580), I0010: Elisabetta Salvago (b. UNKNOWN)",4,Salvago,Benetto,Piron,Caterina,Single
+F0003,I0249,UNKNOWN Coressi (b.UNKNOWN),I0010,Elisabetta Salvago (b. UNKNOWN),,Unknown,I0012: Antonio Coressi (b. UNKNOWN),3,Coressi,UNKNOWN,Salvago,Elisabetta,Single
+F0004,,,I0002,Zuria Salvago (b. ABT 1600),,Istanbul,I0013: Caterina Salvago (b. ABT 1630),2,,,Salvago,Zuria,Single
+F0005,I0015,Stefano Fortis (b.ABT 1625),I0013,Caterina Salvago (b. ABT 1630),,Istanbul,I0016: Maria Fortis (b. ABT 1660),3,Fortis,Stefano,Salvago,Caterina,Single
+F0006,I0017,Francesco-Draco Testa (b.1627),I0016,Maria Fortis (b. ABT 1660),,Istanbul,"I0144: Antonio Testa (b. 1677), I0142: Stefano Testa (b. ABT 1680), I0145: Gasparo Testa (b. 1684), I0146: Giacomo Testa (b. 1688), I0147: Antonio Rocco Testa (b. 1695)",7,Testa,Francesco-Draco,Fortis,Maria,Single
+F0007,I0018,Stefano Testa (b.UNKNOWN),I0011,Gioia Salvago (b. BEF 1580),,Unknown,"I0019: Mariola Testa (b. UNKNOWN), I0020: Salvago Testa (b. UNKNOWN), I0058: Gaspare Testa (b. ABT 1595)",5,Testa,Stefano,Salvago,Gioia,Single
+F0008,I0022,Sebastian Salvago (b.UNKNOWN),,,,Unknown,I0000: Gianesin Salvago (b. BEF 1515),2,Salvago,Sebastian,,,Single
+F0009,I0023,Ambrosio Grillo (b.BEF 1565),I0024,UNKNOWN Salvago (b. BEF 1570),,Unknown,"I0025: Giovanni Antonio Grillo (b. BEF 1588), I0026: Agostino Grillo (b. UNKNOWN), I0455: [daughter] Grillo (b. ABT 1590)",5,Grillo,Ambrosio,Salvago,UNKNOWN,Single
+F0010,I0027,Giacomo Grillo (b.BEF 1555),,,,Unknown,"I0023: Ambrosio Grillo (b. BEF 1565), I0028: Francesco Grillo (b. UNKNOWN)",3,Grillo,Giacomo,,,Single
+F0011,I0025,Giovanni Antonio Grillo (b.BEF 1588),I0029,Caterina Olivieri (b. BEF 1585),,Unknown,"I0033: Gioia Grillo (b. UNKNOWN), I0032: Sobrana Grillo (b. UNKNOWN), I0035: Vittoria Grillo (b. UNKNOWN), I0030: Ambrosio Grillo (b. AFT 1620), I0031: Battistina Grillo (b. ABT 1630)",7,Grillo,Giovanni Antonio,Olivieri,Caterina,Single
+F0012,I0265,Carlo Oliviero Olivieri (b.BEF 1580),,,,Unknown,"I0029: Caterina Olivieri (b. BEF 1585), I0295: Cocona Olivieri (b. UNKNOWN), I0266: Domenico Olivieri (b. UNKNOWN), I0037: Giovanni Olivieri (b. ABT 1612)",5,Olivieri,Carlo Oliviero,,,Single
+F0013,I0037,Giovanni Olivieri (b.ABT 1612),I0040,Cassandra Cantacuzanus (b. BEF 1630),,Unknown,"I0043: Giulianna Olivieri (b. UNKNOWN), I0041: Arzentina Olivieri (b. ABT 1645), I0039: Antonio Olivieri (b. 1655)",5,Olivieri,Giovanni,Cantacuzanus,Cassandra,Single
+F0014,I0042,Domenico Dandria (b.UNKNOWN),I0041,Arzentina Olivieri (b. ABT 1645),1669,Unknown,,2,Dandria,Domenico,Olivieri,Arzentina,Married
+F0015,I0044,UNKNOWN UNKNOWN (b.UNKNOWN),I0043,Giulianna Olivieri (b. UNKNOWN),1681,Unknown,,2,UNKNOWN,UNKNOWN,Olivieri,Giulianna,Married
+F0017,,,,,,Unknown,I0038: Benetta Olivieri (b. ABT 1670),1,,,,,Single
+F0018,I0045,Pietro Pangalo (b.UNKNOWN),I0038,Benetta Olivieri (b. ABT 1670),,Unknown,I0046: Carlo Pangalo (b. 1688),3,Pangalo,Pietro,Olivieri,Benetta,Single
+F0019,I0049,Giovanni Battista Navon (b.ABT 1590),I0048,Bartolomea Coressi (b. UNKNOWN),,Unknown,"I0047: Pasquale Navon (b. BEF 1620), I0050: Tommaso Navon (b. BEF 1640), I0051: Alessandro Navon (b. UNKNOWN), I0330: Lucrezia Navon (b. ABT 1640), I0052: Giovanni Battista Navon (b. ABT 1660)",7,Navon,Giovanni Battista,Coressi,Bartolomea,Single
+F0021,I0056,Niccolo Coressi (b.BEF 1560),I0055,Francesca Navon (b. UNKNOWN),,Unknown,,2,Coressi,Niccolo,Navon,Francesca,Single
+F0022,I0050,Tommaso Navon (b.BEF 1640),I0057,Susanna Soldaniza Testa (b. ABT 1635),BEF 1671,Unknown,I0263: Giovanni Battista Navon (b. 1672),3,Navon,Tommaso,Testa,Susanna Soldaniza,Married
+F0023,I0058,Gaspare Testa (b.ABT 1595),I0059,Aloisia De Negri (b. 1609),,Unknown,"I0060: Antonio Testa (b. ABT 1627), I0017: Francesco-Draco Testa (b. 1627), I0329: Giacomo Testa (b. ABT 1635), I0057: Susanna Soldaniza Testa (b. ABT 1635), I0328: Asanina Testa (b. 1654), I0327: Smaragda Testa (b. 1654)",8,Testa,Gaspare,De Negri,Aloisia,Single
+F0024,I0062,Stefano Piron (b.BEF 1570),I0063,Maria UNKNOWN (b. ABT 1575),,Unknown,"I0064: Domenico Piron (b. UNKNOWN), I0061: Giovanni Piron (b. ABT 1590), I0066: Niccolo Piron (b. ABT 1619), I0065: Antonio Piron (b. ABT 1620)",6,Piron,Stefano,UNKNOWN,Maria,Single
+F0025,I0319,UNKNOWN Piron (b.UNKNOWN),I0067,Teodora UNKNOWN (b. UNKNOWN),,Unknown,I0009: Caterina Piron (b. BEF 1590),3,Piron,UNKNOWN,UNKNOWN,Teodora,Single
+F0026,I0069,Ascanio Fortis (b.BEF 1590),,,,Unknown,"I0267: Angela Fortis (b. UNKNOWN), I0268: Battistina Fortis (b. UNKNOWN), I0070: Giacomo Fortis (b. UNKNOWN), I0068: Pietro Fortis (b. ABT 1610)",5,Fortis,Ascanio,,,Single
+F0027,I0068,Pietro Fortis (b.ABT 1610),,,,Unknown,"I0073: Alvise Fortis (b. BEF 1657), I0071: Giacomo Fortis (b. BEF 1660), I0072: Stefano Fortis (b. BEF 1665)",4,Fortis,Pietro,,,Single
+F0028,I0030,Ambrosio Grillo (b.AFT 1620),I0074,Cassandra Catargis?Rosettis (b. UNKNOWN),ABT 1650,Unknown,"I0270: Cassandra Grillo (b. BEF 1650), I0277: Tommaso Grillo (b. ABT 1651)",4,Grillo,Ambrosio,Catargis?Rosettis,Cassandra,Married
+F0029,I0076,Benetto Gagliano (b.UNKNOWN),,,,Unknown,"I0075: Odoardo Gagliano (b. BEF 1565), I0077: Domenico Gagliano (b. BEF 1567), I0004: Caterina Gagliano (b. UNKNOWN)",4,Gagliano,Benetto,,,Single
+F0030,,,,,,Unknown,"I0077: Domenico Gagliano (b. BEF 1567), I0076: Benetto Gagliano (b. UNKNOWN)",2,,,,,Single
+F0031,I0079,Marcantonio Borisi (b.ABT 1570),I0029,Caterina Olivieri (b. BEF 1585),,Unknown,"I0084: Alessandra Borisi (b. UNKNOWN), I0083: Marcantonio Borisi (b. UNKNOWN), I0085: Maria Borisi (b. UNKNOWN), I0080: Pietro Borisi (b. 1617)",6,Borisi,Marcantonio,Olivieri,Caterina,Single
+F0032,I0079,Marcantonio Borisi (b.ABT 1570),I0086,Alessandra Piron (b. UNKNOWN),BEF 1600,Unknown,"I0087: Cecilia Borisi (b. BEF 1605), I0116: Giacoma Borisi (b. BEF 1609), I0115: Smeralda Borisi (b. BEF 1609), I0082: Sultana Borisi (b. BEF 1609), I0081: Francesca Borisi (b. ABT 1600)",7,Borisi,Marcantonio,Piron,Alessandra,Married
+F0033,I0088,Christoforo Brutti (b.ABT 1590),I0087,Cecilia Borisi (b. BEF 1605),1620,Unknown,"I0208: Cecilia Brutti (b. UNKNOWN), I0207: Despina Brutti (b. UNKNOWN), I0209: Christoforo Brutti (b. AFT 1620)",5,Brutti,Christoforo,Borisi,Cecilia,Married
+F0034,I0089,Pantaleone Mamuca della Torre (b.UNKNOWN),I0087,Cecilia Borisi (b. BEF 1605),,Unknown,"I0461: Anonym Mamuca della Torre (b. UNKNOWN), I0094: Girolama Mamuca della Torre (b. UNKNOWN), I0463: Maria Francesca Mamuca della Torre (b. UNKNOWN), I0093: Vittoria Mamuca della Torre (b. UNKNOWN), I0095: Marcantonio Mamuca della Torre (b. 1636)",7,Mamuca della Torre,Pantaleone,Borisi,Cecilia,Single
+F0035,I0090,Pietro Borisi (b.BEF 1549),I0091,Giacoma Brutti (b. 1549),,Unknown,"I0112: Bernardo Borisi (b. UNKNOWN), I0113: Franceschina Borisi (b. UNKNOWN), I0092: Francesco Borisi (b. UNKNOWN), I0079: Marcantonio Borisi (b. ABT 1570)",6,Borisi,Pietro,Brutti,Giacoma,Single
+F0036,I0095,Marcantonio Mamuca della Torre (b.1636),I0096,Giustiniana Tarsia (b. ABT 1655),23 Apr 1673,Unknown,"I0129: Leopoldo Mamuca della Torre (b. ABT 1676), I0130: Vittoria Mamuca della Torre (b. 1677), I0131: Maria Francesca Mamuca della Torre (b. 1678), I0132: Lucia Mamuca della Torre (b. 1680), I0128: Cristoforo Mamuca della Torre (b. 1681)",7,Mamuca della Torre,Marcantonio,Tarsia,Giustiniana,Married
+F0037,I0097,Hendrik (Henning) Vold (b.UNKNOWN),I0094,Girolama Mamuca della Torre (b. UNKNOWN),,Unknown,"I0224: Federico Vold (b. 1664), I0227: Cecilia Vold (b. ABT 1665), I0225: Aloysio Vold (b. 1671), I0226: Lodovico Vold (b. 1671)",6,Vold,Hendrik (Henning),Mamuca della Torre,Girolama,Single
+F0038,I0098,Carl Christoph (b.UNKNOWN),I0093,Vittoria Mamuca della Torre (b. UNKNOWN),,Unknown,,2,Christoph,Carl,Mamuca della Torre,Vittoria,Single
+F0039,I0099,Pelegrino Testa (b.UNKNOWN),I0081,Francesca Borisi (b. ABT 1600),ABT 1619,Unknown,I0101: Asanina Testa (b. ABT 1623),3,Testa,Pelegrino,Borisi,Francesca,Married
+F0040,I0100,Hans Anderson Scoccardi (b.1604),I0081,Francesca Borisi (b. ABT 1600),BEF 1641,Unknown,I0102: Gioia Scoccardi (b. ABT 1641),3,Scoccardi,Hans Anderson,Borisi,Francesca,Married
+F0041,I0103,Giovanni Mascellini (b.1612),I0102,Gioia Scoccardi (b. ABT 1641),,Unknown,"I0104: Laura Mascellini (b. BEF 1670), I0348: Lucia Mascellini (b. BEF 1677), I0105: Francesco Mascellini (b. UNKNOWN)",5,Mascellini,Giovanni,Scoccardi,Gioia,Single
+F0042,I0080,Pietro Borisi (b.1617),I0106,Maria Verzi (b. ABT 1617),1634,Unknown,"I0109: Bernardo Borisi (b. UNKNOWN), I0110: Francesco Borisi (b. UNKNOWN), I0111: Marin Borisi (b. UNKNOWN), I0107: Marcantonio Borisi (b. 30 JUN 1637)",6,Borisi,Pietro,Verzi,Maria,Married
+F0043,I0107,Marcantonio Borisi (b.30 JUN 1637),I0108,Santa Bembo (b. UNKNOWN),,Unknown,,2,Borisi,Marcantonio,Bembo,Santa,Single
+F0044,I0114,UNKNOWN Gravisi (b.UNKNOWN),I0113,Franceschina Borisi (b. UNKNOWN),,Unknown,,2,Gravisi,UNKNOWN,Borisi,Franceschina,Single
+F0045,I0117,Christoforo Tarsia (b.ABT 1610),I0149,Battistina Zanetti (b. BEF 1625),ABT 1640,Istanbul,"I0120: Giacomo Tarsia (b. BEF 1650), I0118: Angela Tarsia (b. UNKNOWN), I0121: Leonardo Tarsia (b. ABT 1640), I0119: Tommaso Tarsia (b. 1641), I0096: Giustiniana Tarsia (b. ABT 1655), I0124: Battistina Tarsia (b. ABT 1659)",8,Tarsia,Christoforo,Zanetti,Battistina,Married
+F0046,I0154,Agostino Tarsia (b.UNKNOWN),I0152,Angela Brutti (b. UNKNOWN),1610,Istanbul,"I0153: Ruggier Tarsia (b. BEF 1620), I0123: Marco Tarsia (b. BEF 1624), I0117: Christoforo Tarsia (b. ABT 1610), I0125: Bradamante Tarsia (b. ABT 1620)",6,Tarsia,Agostino,Brutti,Angela,Married
+F0047,I0120,Giacomo Tarsia (b.BEF 1650),I0104,Laura Mascellini (b. BEF 1670),BEF 1686,Unknown,"I0133: Battistina Tarsia (b. 1686), I0134: Giovanni Battista Tarsia (b. 1687), I0135: Anna Maria Tarsia (b. 1688), I0136: Angela Tarsia (b. 1691), I0137: Antonio Tarsia (b. 1692), I0138: Angela Maria Tarsia (b. 1693), I0139: Maria Tarsia (b. 1694), I0296: Christoforo Tarsia (b. ABT 1695), I0140: Angela Tarsia (b. 1695), I0141: Vittoria Tarsia (b. 1697)",12,Tarsia,Giacomo,Mascellini,Laura,Married
+F0049,I0126,Girolamo Carli (b.BEF 1626),I0125,Bradamante Tarsia (b. ABT 1620),,Unknown,"I0479: Anzoletta Carli (b. UNKNOWN), I0481: Bionda Carli (b. UNKNOWN), I0482: Elena Carli (b. UNKNOWN), I0477: Stefano Carli (b. UNKNOWN), I0480: Agostino Don Carli (b. UNKNOWN), I0127: Gian Rinaldo Carli (b. 1646)",8,Carli,Girolamo,Tarsia,Bradamante,Single
+F0050,I0030,Ambrosio Grillo (b.AFT 1620),I0118,Angela Tarsia (b. UNKNOWN),AFT 1683,Unknown,,2,Grillo,Ambrosio,Tarsia,Angela,Married
+F0051,I0142,Stefano Testa (b.ABT 1680),I0140,Angela Tarsia (b. 1695),1710,Unknown,I0143: Maria Elisabetta Testa (b. ABT 1710),3,Testa,Stefano,Tarsia,Angela,Married
+F0052,I0145,Gasparo Testa (b.1684),I0232,Maria De Negri (b. 1690),1715,Unknown,"I0239: Clara Testa (b. 1716), I0240: Francesco Testa (b. 1717), I0241: Angela Testa (b. 1718), I0242: Caterina Cecilia Testa (b. 1719), I0243: Lucia Testa (b. 1721), I0248: Maria Testa (b. 1721), I0244: Lucia Testa (b. 1722), I0245: Bartolomeo De Testa (b. 1723), I0246: Giacomo Testa (b. 1725), I0247: Susanna Testa (b. 1727)",12,Testa,Gasparo,De Negri,Maria,Married
+F0054,I0150,Tommaso Zanetti (b.ABT 1578),I0492,Smeralda Grillo (b. UNKNOWN),,Unknown,"I0149: Battistina Zanetti (b. BEF 1625), I0151: Annetta Zanetti (b. BEF 1634)",4,Zanetti,Tommaso,Grillo,Smeralda,Single
+F0055,I0156,Antonio Brutti (b.1518),I0157,Maria Bruni (b. UNKNOWN),,Corfu,"I0165: Antonio Brutti (b. UNKNOWN), I0210: Benedetto Brutti (b. UNKNOWN), I0170: Christoforo Brutti (b. UNKNOWN), I0163: Giacomo Brutti (b. UNKNOWN), I0162: Marco Brutti (b. UNKNOWN), I0091: Giacoma Brutti (b. 1549), I0155: Bartolomeo Brutti (b. 1557)",9,Brutti,Antonio,Bruni,Maria,Single
+F0056,I0155,Bartolomeo Brutti (b.1557),I0158,Maria Da Plebe (b. ABT 1560),BEF 1579,Unknown,I0178: Antonio-Stanislao Brutti (b. 1579),3,Brutti,Bartolomeo,Da Plebe,Maria,Married
+F0057,I0160,UNKNOWN Da Plebe (b.UNKNOWN),I0159,UNKNOWN De Faro (b. UNKNOWN),,Unknown,I0158: Maria Da Plebe (b. ABT 1560),3,Da Plebe,UNKNOWN,De Faro,UNKNOWN,Single
+F0058,,,,,,Unknown,"I0161: Mathias De Faro (b. UNKNOWN), I0159: UNKNOWN De Faro (b. UNKNOWN)",2,,,,,Single
+F0059,I0163,Giacomo Brutti (b.UNKNOWN),I0164,Bradamante Verzi (b. UNKNOWN),,Unknown,"I0152: Angela Brutti (b. UNKNOWN), I0221: Antonio Brutti (b. UNKNOWN), I0219: Bradamante Brutti (b. UNKNOWN), I0212: Catarina Brutti (b. UNKNOWN), I0220: Christoforo Brutti (b. UNKNOWN), I0222: Oria Brutti (b. UNKNOWN), I0215: Barnabà Brutti (b. ABT 1590), I0218: Bartolomeo Brutti (b. ABT 1600)",10,Brutti,Giacomo,Verzi,Bradamante,Single
+F0060,I0167,Matteo Bruni (b.UNKNOWN),,,,Unknown,"I0168: Gasparo Bruni (b. UNKNOWN), I0169: Giovanni Bruni (b. UNKNOWN), I0157: Maria Bruni (b. UNKNOWN)",4,Bruni,Matteo,,,Single
+F0061,I0172,Demostenio Carerio (b.UNKNOWN),I0171,Ilarietta Brutti (b. UNKNOWN),,Unknown,,2,Carerio,Demostenio,Brutti,Ilarietta,Single
+F0062,I0174,Marco d'Abri (b.UNKNOWN),I0173,Lucietta Brutti (b. UNKNOWN),,Unknown,,2,d'Abri,Marco,Brutti,Lucietta,Single
+F0063,,,,,,Unknown,"I0176: Honofrio Verzi (b. UNKNOWN), I0177: Rinaldo Verzi (b. UNKNOWN), I0175: Rizardo Verzi (b. UNKNOWN), I0106: Maria Verzi (b. ABT 1617)",4,,,,,Single
+F0064,I0180,Rizzardo Verzi (b.UNKNOWN),I0179,Caterina Brutti (b. UNKNOWN),,Unknown,,2,Verzi,Rizzardo,Brutti,Caterina,Single
+F0065,I0181,Barnaba Brutti (b.1474),I0182,Gioia Capellichio (b. UNKNOWN),,Unknown,"I0179: Caterina Brutti (b. UNKNOWN), I0185: Christoforo Brutti (b. UNKNOWN), I0184: Giacoma Brutti (b. UNKNOWN), I0171: Ilarietta Brutti (b. UNKNOWN), I0173: Lucietta Brutti (b. UNKNOWN), I0156: Antonio Brutti (b. 1518)",8,Brutti,Barnaba,Capellichio,Gioia,Single
+F0066,I0186,Antonio Brutti (b.1446),I0187,Oria Castriota (b. UNKNOWN),,Unknown,"I0200: Bona Brutti (b. UNKNOWN), I0196: Giovanni Brutti (b. UNKNOWN), I0197: Lucia Brutti (b. UNKNOWN), I0205: Marco Brutti (b. UNKNOWN), I0202: Maria Brutti (b. UNKNOWN), I0203: Oria Brutti (b. UNKNOWN), I0199: Pietro Brutti (b. UNKNOWN), I0181: Barnaba Brutti (b. 1474)",10,Brutti,Antonio,Castriota,Oria,Single
+F0067,I0188,Bartolomeo Brutti (b.UNKNOWN),I0189,Laura Dukaina (b. UNKNOWN),,Unknown,"I0194: Antonio Brutti (b. UNKNOWN), I0193: Christoforo Brutti (b. UNKNOWN), I0195: Decio Brutti (b. UNKNOWN), I0191: Giorgia Brutti (b. UNKNOWN), I0192: Giovanni Brutti (b. UNKNOWN), I0190: Bartolomeo Brutti (b. 1419), I0186: Antonio Brutti (b. 1446)",9,Brutti,Bartolomeo,Dukaina,Laura,Single
+F0068,I0198,Stefano Bruni (b.UNKNOWN),I0197,Lucia Brutti (b. UNKNOWN),,Unknown,,2,Bruni,Stefano,Brutti,Lucia,Single
+F0069,I0201,Lavio Suina (b.UNKNOWN),I0200,Bona Brutti (b. UNKNOWN),,Unknown,,2,Suina,Lavio,Brutti,Bona,Single
+F0070,I0204,Giovanni Dukaina (b.UNKNOWN),I0203,Oria Brutti (b. UNKNOWN),,Unknown,,2,Dukaina,Giovanni,Brutti,Oria,Single
+F0071,I0210,Benedetto Brutti (b.UNKNOWN),I0211,Despina Borisi (b. UNKNOWN),,Corfu,I0088: Christoforo Brutti (b. ABT 1590),3,Brutti,Benedetto,Borisi,Despina,Single
+F0072,I0213,Lucrezio Gravisi (b.1558),I0212,Catarina Brutti (b. UNKNOWN),,Koper,,2,Gravisi,Lucrezio,Brutti,Catarina,Single
+F0073,I0213,Lucrezio Gravisi (b.1558),I0214,Paola Strassoldo (b. UNKNOWN),,Koper,,2,Gravisi,Lucrezio,Strassoldo,Paola,Single
+F0074,I0215,Barnabà Brutti (b.ABT 1590),I0216,Maria Civran (b. UNKNOWN),,Unknown,,2,Brutti,Barnabà,Civran,Maria,Single
+F0075,I0215,Barnabà Brutti (b.ABT 1590),I0217,Paola Vergerio (b. UNKNOWN),,Unknown,,2,Brutti,Barnabà,Vergerio,Paola,Single
+F0076,I0127,Gian Rinaldo Carli (b.1646),I0223,Caterina De Negri (b. ABT 1670),BEF 1687,Unknown,,2,Carli,Gian Rinaldo,De Negri,Caterina,Married
+F0077,I0228,Francesco De Negri (b.ABT 1660),I0227,Cecilia Vold (b. ABT 1665),BEF 1684,Unknown,"I0229: Bernardo De Negri (b. 1684), I0230: Bartolomeo De Negri (b. 1687), I0231: Clara Constantia De Negri (b. 1688), I0232: Maria De Negri (b. 1690), I0233: Antonio De Negri (b. 1691), I0234: Catarina De Negri (b. 1693), I0235: Andrea De Negri (b. 1696), I0238: Daniele De Negri (b. 1696), I0236: Stefano De Negri (b. 1701), I0237: Christoforo De Negri (b. 1703)",12,De Negri,Francesco,Vold,Cecilia,Married
+F0078,I0075,Odoardo Gagliano (b.BEF 1565),I0413,Gioia Ralli (b. UNKNOWN),,Unknown,"I0250: Elisabetta Gagliano (b. ABT 1590), I0415: Assanina Gagliano (b. ABT 1598), I0416: Domenico Gagliano (b. ABT 1598), I0414: Libania Gagliano (b. ABT 1600)",6,Gagliano,Odoardo,Ralli,Gioia,Single
+F0079,I0053,Pasquale Navon (b.AFT 1530),,,,Unknown,"I0055: Francesca Navon (b. UNKNOWN), I0054: Tommaso Navon (b. ABT 1580), I0049: Giovanni Battista Navon (b. ABT 1590)",4,Navon,Pasquale,,,Single
+F0080,I0054,Tommaso Navon (b.ABT 1580),I0250,Elisabetta Gagliano (b. ABT 1590),,Unknown,"I0251: Costantino Navon (b. UNKNOWN), I0252: Giorgio Navon (b. UNKNOWN)",4,Navon,Tommaso,Gagliano,Elisabetta,Single
+F0081,I0047,Pasquale Navon (b.BEF 1620),I0253,Lucrezia Fornetti (b. UNKNOWN),BEF 1676,Unknown,"I0254: Tommaso Navon (b. BEF 1720), I0255: Pasquale Navon (b. UNKNOWN)",4,Navon,Pasquale,Fornetti,Lucrezia,Married
+F0082,I0256,Francesco Fornetti (b.UNKNOWN),I0257,Soprana UNKNOWN (b. UNKNOWN),,Unknown,I0253: Lucrezia Fornetti (b. UNKNOWN),3,Fornetti,Francesco,UNKNOWN,Soprana,Single
+F0083,I0258,Tommaso Fornetti (b.ABT 1585),,,,Unknown,"I0261: Catarina Fornetti (b. UNKNOWN), I0256: Francesco Fornetti (b. UNKNOWN), I0260: Paolo Fornetti (b. UNKNOWN), I0262: Subru Fornetti (b. UNKNOWN), I0259: Giovanni Battista Fornetti (b. 1618)",6,Fornetti,Tommaso,,,Single
+F0084,I0264,Domenico Olivieri (b.BEF 1545),,,,Unknown,I0265: Carlo Oliviero Olivieri (b. BEF 1580),2,Olivieri,Domenico,,,Single
+F0085,I0269,Constantino Gulianò (b.UNKNOWN),I0031,Battistina Grillo (b. ABT 1630),1655,Unknown,"I0280: Antonio Gulianò (b. UNKNOWN), I0279: Demetrius Gulianò (b. UNKNOWN), I0278: Zamfira Gulianò (b. ABT 1690)",5,Gulianò,Constantino,Grillo,Battistina,Married
+F0086,I0271,Paolo Vecchia (b.BEF 1610),I0031,Battistina Grillo (b. ABT 1630),,Unknown,,2,Vecchia,Paolo,Grillo,Battistina,Single
+F0087,I0272,Demetrius Gulianò (b.UNKNOWN),I0273,Sofia Beglitzi (b. UNKNOWN),,Unknown,"I0269: Constantino Gulianò (b. UNKNOWN), I0274: Demetrius Gulianò (b. UNKNOWN), I0275: Tudorache Gulianò (b. UNKNOWN)",5,Gulianò,Demetrius,Beglitzi,Sofia,Single
+F0088,I0276,Scarlatos Beglitzi (b.BEF 1570),I0285,Cocona Caradja (b. BEF 1591),,Unknown,"I0287: Asanina Beglitzi (b. UNKNOWN), I0273: Sofia Beglitzi (b. UNKNOWN), I0286: Ruxandra Beglitzi (b. 1605)",5,Beglitzi,Scarlatos,Caradja,Cocona,Single
+F0089,I0281,John Mavrocordatos (b.1684),I0278,Zamfira Gulianò (b. ABT 1690),1709,Unknown,I0290: Alexandre Mavrocordatos (b. 1710),3,Mavrocordatos,John,Gulianò,Zamfira,Married
+F0090,I0288,Alexandre Mavrocordatos (b.1641),I0289,Sultana Chrysoscholeou (b. BEF 1668),1670,Unknown,"I0282: Nicholas Mavrocordatos (b. BEF 1670), I0281: John Mavrocordatos (b. 1684)",4,Mavrocordatos,Alexandre,Chrysoscholeou,Sultana,Married
+F0091,,,,,,Unknown,I0283: John Mavrocordatos (b. 1712),1,,,,,Single
+F0092,I0283,John Mavrocordatos (b.1712),I0284,Maria Gulianò (b. UNKNOWN),,Unknown,,2,Mavrocordatos,John,Gulianò,Maria,Single
+F0093,I0452,Alexander Coconul (b.UNKNOWN),I0286,Ruxandra Beglitzi (b. 1605),1633,Unknown,,2,Coconul,Alexander,Beglitzi,Ruxandra,Married
+F0094,I0291,Nicholas Mavrocordatos (b.1599),I0286,Ruxandra Beglitzi (b. 1605),,Unknown,I0288: Alexandre Mavrocordatos (b. 1641),3,Mavrocordatos,Nicholas,Beglitzi,Ruxandra,Single
+F0095,I0282,Nicholas Mavrocordatos (b.BEF 1670),I0292,Cassandra Cantacuzanus (b. UNKNOWN),1700,Unknown,I0283: John Mavrocordatos (b. 1712),3,Mavrocordatos,Nicholas,Cantacuzanus,Cassandra,Married
+F0096,I0293,Demetrius Cantacuzanus (b.1620),I0270,Cassandra Grillo (b. BEF 1650),,Unknown,I0292: Cassandra Cantacuzanus (b. UNKNOWN),3,Cantacuzanus,Demetrius,Grillo,Cassandra,Single
+F0098,I0297,Nicolao Joseph Theÿls (b.ABT 1689),I0140,Angela Tarsia (b. 1695),1718,Unknown,"I0298: Caterina Theÿls (b. 1720), I0299: Laura Theÿls (b. 1721), I0300: Victoria Anna Theÿls (b. 1722), I0301: Lucia Barbara Theÿls (b. 1723), I0302: Gulielmo Theÿls (b. 1725), I0303: Antonio Benedetto Theÿls (b. 1729), I0304: Francesco Rocco Theÿls (b. 1730)",9,Theÿls,Nicolao Joseph,Tarsia,Angela,Married
+F0099,I0305,Willem (Guglielmo) Theÿls (b.ABT 1644),I0306,Catarina Piron (b. ABT 1657),,Unknown,"I0346: Tommaso Theÿls (b. 1682), I0335: Sibilla Victoria Theÿls (b. 1684), I0336: Clara Anna Theÿls (b. 1686), I0337: Giovanni Battista Tommaso Theÿls (b. 1687), I0297: Nicolao Joseph Theÿls (b. ABT 1689), I0338: Anton Theÿls (b. 1690), I0339: Zenobia Theÿls (b. 1691), I0340: Maria Theÿls (b. 1692), I0341: Jacoba Theÿls (b. 1694), I0342: Maria Maddalena Theÿls (b. 1696), I0343: Francesca Catterina Theÿls (b. 1698), I0344: Johan Theÿls (b. 1701), I0345: Ignace George Theÿls (b. 1704)",15,Theÿls,Willem (Guglielmo),Piron,Catarina,Single
+F0100,I0307,Antonio Pisani (b.1697),I0143,Maria Elisabetta Testa (b. ABT 1710),ABT 1728,Unknown,"I0308: Stephano Pisani (b. ABT 1735), I0309: Nicolao Pisani (b. ABT 1740), I0310: Catarina Pisani (b. 1746)",5,Pisani,Antonio,Testa,Maria Elisabetta,Married
+F0101,I0311,Luca Navon (b.1716),I0310,Catarina Pisani (b. 1746),BEF 1762,Unknown,"I0444: Pietro Navon (b. 1762), I0445: Giovanni Battista Navon (b. 1764)",4,Navon,Luca,Pisani,Catarina,Married
+F0102,I0105,Francesco Mascellini (b.UNKNOWN),I0352,Benetta UNKNOWN (b. BEF 1668),BEF 1684,Unknown,"I0449: Anna Mascellini (b. UNKNOWN), I0448: Gianesina Mascellini (b. UNKNOWN), I0312: Giovanni Mascellini (b. 1684), I0353: Stefano Maria Mascellini (b. 1686), I0354: Vittoria Mascellini (b. 1688)",7,Mascellini,Francesco,UNKNOWN,Benetta,Married
+F0103,I0312,Giovanni Mascellini (b.1684),I0420,Maria Ralli (b. ABT 1750),BEF 1771,Unknown,"I0398: Alessandro Mascellini (b. UNKNOWN), I0317: Anna Mascellini (b. UNKNOWN), I0316: Giustina Mascellini (b. UNKNOWN), I0315: Mario Mascellini (b. UNKNOWN), I0314: Paolo Mascellini (b. UNKNOWN), I0491: Francesco Mascellini (b. ABT 1731), I0421: Giovanni Maria Mascellini (b. 1743)",9,Mascellini,Giovanni,Ralli,Maria,Married
+F0104,I0318,Nicoroso Piron (b.BEF 1620),,,,Unknown,I0306: Catarina Piron (b. ABT 1657),2,Piron,Nicoroso,,,Single
+F0105,I0065,Antonio Piron (b.ABT 1620),I0320,Smaragda Fortis (b. ABT 1660),ABT 1680,Unknown,"I0325: Maria Piron (b. ABT 1680), I0321: Catarina Piron (b. 1688), I0322: Francesco Piron (b. 1689), I0323: Lucrezia Piron (b. 1692), I0324: Battistina Piron (b. 1695)",7,Piron,Antonio,Fortis,Smaragda,Married
+F0106,I0326,Giorgio Sperco (b.1670),I0325,Maria Piron (b. ABT 1680),1696,Unknown,,2,Sperco,Giorgio,Piron,Maria,Married
+F0108,I0052,Giovanni Battista Navon (b.ABT 1660),I0331,Caterina Barca (b. ABT 1682),BEF 1705,Unknown,"I0332: Lucia Navon (b. BEF 1705), I0356: Lucrezia Navon (b. 1705)",4,Navon,Giovanni Battista,Barca,Caterina,Married
+F0109,I0334,UNKNOWN Salvago (b.UNKNOWN),I0295,Cocona Olivieri (b. UNKNOWN),,Unknown,,2,Salvago,UNKNOWN,Olivieri,Cocona,Single
+F0110,I0347,Jan Janz Theÿls (b.UNKNOWN),,,,Unknown,I0305: Willem (Guglielmo) Theÿls (b. ABT 1644),2,Theÿls,Jan Janz,,,Single
+F0111,I0349,Charles Leduc (b.BEF 1670),I0348,Lucia Mascellini (b. BEF 1677),1693,Unknown,"I0376: Elena Margarita Leduc (b. 1694), I0350: Maria Laura Leduc (b. 1696), I0351: Theresa Maria Leduc (b. 1697)",5,Leduc,Charles,Mascellini,Lucia,Married
+F0112,I0355,Francesco Dane (b.ABT 1640),I0330,Lucrezia Navon (b. ABT 1640),1662,Unknown,,2,Dane,Francesco,Navon,Lucrezia,Married
+F0113,I0357,Charles Fornetti (b.1700),I0332,Lucia Navon (b. BEF 1705),1721,Unknown,,2,Fornetti,Charles,Navon,Lucia,Married
+F0114,I0358,Pierre Joachim Fonton (b.1687),I0356,Lucrezia Navon (b. 1705),,Unknown,I0451: Charles Fonton (b. 1725),3,Fonton,Pierre Joachim,Navon,Lucrezia,Single
+F0115,I0359,Joachim Fonton (b.1651),I0360,Anne Joulin (b. 1668),1686,Unknown,I0358: Pierre Joachim Fonton (b. 1687),3,Fonton,Joachim,Joulin,Anne,Married
+F0116,I0259,Giovanni Battista Fornetti (b.1618),I0361,Augustina Navon (b. ABT 1645),1663,Unknown,"I0363: Tommaso Fornetti (b. 1663), I0364: Anna Vittoria Fornetti (b. ABT 1664), I0365: Domenico Fornetti (b. ABT 1668), I0366: Annetta Fornetti (b. ABT 1671)",6,Fornetti,Giovanni Battista,Navon,Augustina,Married
+F0117,I0362,Domenico Fornetti (b.ABT 1570),,,,Unknown,I0258: Tommaso Fornetti (b. ABT 1585),2,Fornetti,Domenico,,,Single
+F0118,I0367,Francesco Testa (b.ABT 1665),I0366,Annetta Fornetti (b. ABT 1671),ABT 1693,Unknown,,2,Testa,Francesco,Fornetti,Annetta,Married
+F0119,I0060,Antonio Testa (b.ABT 1627),I0368,Alessandra Dane (b. ABT 1640),ABT 1665,Unknown,"I0367: Francesco Testa (b. ABT 1665), I0369: Catarina Testa (b. 1667)",4,Testa,Antonio,Dane,Alessandra,Married
+F0120,I0370,Giovanni Battista Dane (b.1667),I0369,Catarina Testa (b. 1667),BEF 1693,Unknown,,2,Dane,Giovanni Battista,Testa,Catarina,Married
+F0121,I0371,Cipriano Dane (b.ABT 1610),I0372,Curcanizza UNKNOWN (b. ABT 1610),,Unknown,"I0373: Bartolomeo Dane (b. ABT 1630), I0374: Maria Dane (b. ABT 1630), I0368: Alessandra Dane (b. ABT 1640), I0375: Elisabetta Dane (b. ABT 1640)",6,Dane,Cipriano,UNKNOWN,Curcanizza,Single
+F0122,I0373,Bartolomeo Dane (b.ABT 1630),I0101,Asanina Testa (b. ABT 1623),,Unknown,,2,Dane,Bartolomeo,Testa,Asanina,Single
+F0123,I0377,Luca Barca (b.BEF 1655),I0378,Assanina De Negri (b. BEF 1667),ABT 1682,Unknown,"I0331: Caterina Barca (b. ABT 1682), I0379: Nicoletta Barca (b. 1685), I0382: Paolo Pietro Barca (b. 1688), I0380: Maria Barca (b. 1692), I0381: Gloria Barca (b. 1694)",7,Barca,Luca,De Negri,Assanina,Married
+F0124,I0383,Bernardo De Negri (b.BEF 1640),,,,Unknown,"I0378: Assanina De Negri (b. BEF 1667), I0228: Francesco De Negri (b. ABT 1660), I0385: Gioia De Negri (b. ABT 1670), I0384: Luca De Negri (b. ABT 1670)",5,De Negri,Bernardo,,,Single
+F0125,I0386,Rinaldo Carli (b.BEF 1700),I0388,Cecilia Imberti (b. UNKNOWN),,Unknown,"I0390: Sebastiano Carli (b. UNKNOWN), I0497: UNKNOWN Carli (b. UNKNOWN), I0387: Gian Rinaldo Carli (b. 1720), I0391: Girolamo Carli (b. ABT 1725), I0389: Stefano Carli (b. 1726)",7,Carli,Rinaldo,Imberti,Cecilia,Single
+F0126,I0387,Gian Rinaldo Carli (b.1720),I0392,Paola Rubbi (b. 1723),1747,Unknown,I0393: Agostino Giovanni Carli-Rubbi (b. 1748),3,Carli,Gian Rinaldo,Rubbi,Paola,Married
+F0127,I0387,Gian Rinaldo Carli (b.1720),I0394,Anna Maria Lanfranchi Chiccoli (b. UNKNOWN),1752,Unknown,,2,Carli,Gian Rinaldo,Lanfranchi Chiccoli,Anna Maria,Married
+F0128,I0395,Marin Calavrò Imberti (b.BEF 1700),,,,Unknown,"I0401: Cosmo Calavrò Imberti (b. BEF 1737), I0396: Marco Calavrò Imberti (b. BEF 1738), I0397: Giovanni Battista Calavrò Imberti (b. 1738)",4,Calavrò Imberti,Marin,,,Single
+F0129,I0402,Giovanni Medun (b.BEF 1710),,,,Unknown,I0403: Francesco Medun (b. ABT 1730),2,Medun,Giovanni,,,Single
+F0130,I0403,Francesco Medun (b.ABT 1730),,,,Unknown,I0404: Carlo Urbano Medun (b. BEF 1760),2,Medun,Francesco,,,Single
+F0131,I0404,Carlo Urbano Medun (b.BEF 1760),I0405,Thérèse Schembri (b. BEF 1767),,Unknown,"I0450: Teresa Medun (b. ABT 1783), I0407: Maria Medun (b. ABT 1790), I0406: Madeleine Florence Medun (b. 1795)",5,Medun,Carlo Urbano,Schembri,Thérèse,Single
+F0132,I0419,Diamantino Ralli (b.UNKNOWN),,,,Unknown,I0413: Gioia Ralli (b. UNKNOWN),2,Ralli,Diamantino,,,Single
+F0133,I0421,Giovanni Maria Mascellini (b.1743),I0422,Maria Rosa (b. 1751),ABT 1770,Unknown,"I0423: Paolo Mascellini (b. 1771), I0424: Giovanni Federico Mascellini (b. 1773), I0425: Giustina Lucia Mascellini (b. 1774), I0426: Andrea Mascellini (b. 1776), I0427: Luigia Maria Catarina Mascellini (b. 1777), I0428: Pietro Mascellini (b. 1779), I0429: Giovani Costantino Mascellini (b. 1781)",9,Mascellini,Giovanni Maria,Rosa,Maria,Married
+F0134,I0430,Giovanni Antonio Pini (b.1715),I0431,Antonia Chirico (b. ABT 1736),1760,Unknown,"I0432: Elena Pini (b. 1761), I0433: Andrea Pini (b. 1762), I0434: Teresa Pini (b. 1763)",5,Pini,Giovanni Antonio,Chirico,Antonia,Married
+F0135,I0435,Luca Chirico (b.ABT 1679),I0351,Theresa Maria Leduc (b. 1697),ABT 1715,Ragusa,"I0436: Caterina Chirico (b. 1716), I0437: Lucia Chirico (b. ABT 1722), I0438: Georgio Chirico (b. ABT 1727)",5,Chirico,Luca,Leduc,Theresa Maria,Married
+F0136,,,,,,Unknown,"I0440: Stefano di Gioveni (b. BEF 1560), I0441: Alessandra di Gioveni (b. UNKNOWN)",2,,,,,Single
+F0137,,,I0441,Alessandra di Gioveni (b. UNKNOWN),,Unknown,I0442: Bartolomea UNKNOWN (b. UNKNOWN),2,,,di Gioveni,Alessandra,Single
+F0138,I0443,Tommaso Fornetti (b.BEF 1550),,,,Unknown,I0362: Domenico Fornetti (b. ABT 1570),2,Fornetti,Tommaso,,,Single
+F0139,,,,,,Unknown,I0447: Michiel Parada (b. ABT 1622),1,,,,,Single
+F0140,,,,,,Unknown,"I0446: Ippolito Parada (b. BEF 1610), I0447: Michiel Parada (b. ABT 1622)",2,,,,,Single
+F0141,I0453,Radu Mihnea (b.UNKNOWN),,,,Unknown,I0452: Alexander Coconul (b. UNKNOWN),2,Mihnea,Radu,,,Single
+F0142,,,I0454,Cassandra Ilias (b. UNKNOWN),,Unknown,I0289: Sultana Chrysoscholeou (b. BEF 1668),2,,,Ilias,Cassandra,Single
+F0143,I0456,Michele Mamuca (b.UNKNOWN),I0457,Geronima Giustiniani (b. UNKNOWN),,Unknown,"I0458: Veronica Mamuca (b. UNKNOWN), I0089: Pantaleone Mamuca della Torre (b. UNKNOWN)",4,Mamuca,Michele,Giustiniani,Geronima,Single
+F0144,I0459,Michele Mavrocordatos (b.UNKNOWN),I0458,Veronica Mamuca (b. UNKNOWN),,Unknown,,2,Mavrocordatos,Michele,Mamuca,Veronica,Single
+F0145,,,,,,Unknown,"I0459: Michele Mavrocordatos (b. UNKNOWN), I0291: Nicholas Mavrocordatos (b. 1599)",2,,,,,Single
+F0146,I0153,Ruggier Tarsia (b.BEF 1620),,,,Unknown,I0460: Agostino Tarsia (b. UNKNOWN),2,Tarsia,Ruggier,,,Single
+F0147,I0462,Bartolomeo Patrigo (b.UNKNOWN),I0461,Anonym Mamuca della Torre (b. UNKNOWN),,Unknown,,2,Patrigo,Bartolomeo,Mamuca della Torre,Anonym,Single
+F0148,I0464,Adam Kalnoky (b.UNKNOWN),I0463,Maria Francesca Mamuca della Torre (b. UNKNOWN),,Unknown,,2,Kalnoky,Adam,Mamuca della Torre,Maria Francesca,Single
+F0150,I0128,Cristoforo Mamuca della Torre (b.1681),I0466,Maria Judith Khuen von Belasi und Lichtenberg (b. UNKNOWN),,Unknown,"I0469: Josefa Franziska Lucia Mamuca von Thurn (b. UNKNOWN), I0470: Maria Josefa Mamuca von Thurn (b. UNKNOWN), I0467: Johann Michael II Wenzeslaus Mamuca von Thurn (b. 1737), I0468: Johann III Veit Mamuca von Thurn (b. 1739)",6,Mamuca della Torre,Cristoforo,Khuen von Belasi und Lichtenberg,Maria Judith,Single
+F0151,I0245,Bartolomeo De Testa (b.1723),,,,Unknown,"I0473: Gaspar De Testa (b. UNKNOWN), I0471: Henri De Testa (b. UNKNOWN), I0472: Jean-Antoine De Testa (b. UNKNOWN)",4,De Testa,Bartolomeo,,,Single
+F0152,I0474,Constantin Caradja (b.BEF 1540),,,,Unknown,"I0475: Dumitrascu Caradja (b. BEF 1555), I0285: Cocona Caradja (b. BEF 1591)",3,Caradja,Constantin,,,Single
+F0153,I0389,Stefano Carli (b.1726),I0476,Cecilia Contessa Manzini Carli (b. UNKNOWN),,Unknown,,2,Carli,Stefano,Contessa Manzini Carli,Cecilia,Single
+F0154,I0477,Stefano Carli (b.UNKNOWN),I0478,Agnesina Barbabianca (b. UNKNOWN),,Unknown,"I0386: Rinaldo Carli (b. BEF 1700), I0490: Bradamante Carli (b. UNKNOWN)",4,Carli,Stefano,Barbabianca,Agnesina,Single
+F0155,I0460,Agostino Tarsia (b.UNKNOWN),,,,Capodistria,I0488: Apollonia Tarsia (b. BEF 1680),2,Tarsia,Agostino,,,Single
+F0156,I0483,Sebastiano Imberti (b.UNKNOWN),I0484,Anna Baldo (b. UNKNOWN),,Unknown,I0388: Cecilia Imberti (b. UNKNOWN),3,Imberti,Sebastiano,Baldo,Anna,Single
+F0157,I0485,Nicola Baldo (b.UNKNOWN),,,,Unknown,I0484: Anna Baldo (b. UNKNOWN),2,Baldo,Nicola,,,Single
+F0158,I0486,Martino Imberti (b.UNKNOWN),,,,Unknown,I0483: Sebastiano Imberti (b. UNKNOWN),2,Imberti,Martino,,,Single
+F0159,I0305,Willem (Guglielmo) Theÿls (b.ABT 1644),I0489,Bonna Anna /Patriga (b. UNKNOWN),,Unknown,,2,Theÿls,Willem (Guglielmo),Anna /Patriga,Bonna,Single
+F0160,I0493,Amichetto Grillo (b.UNKNOWN),I0494,Ginevretta Fiesco (b. UNKNOWN),,Unknown,I0492: Smeralda Grillo (b. UNKNOWN),3,Grillo,Amichetto,Fiesco,Ginevretta,Single
+F0161,I0495,Antonio Tarsia (b.UNKNOWN),I0496,Blonda Petronio (b. UNKNOWN),,Unknown,I0154: Agostino Tarsia (b. UNKNOWN),3,Tarsia,Antonio,Petronio,Blonda,Single
+F0162,I0498,Giambattista Manzioli (b.UNKNOWN),I0497,UNKNOWN Carli (b. UNKNOWN),,Unknown,,2,Manzioli,Giambattista,Carli,UNKNOWN,Single
+F0163,I0499,UNKNOWN Costi (b.UNKNOWN),I0414,Libania Gagliano (b. ABT 1600),,Unknown,,2,Costi,UNKNOWN,Gagliano,Libania,Single
+SF001,,,I0333,Salvaga Testa (b. UNKNOWN),,Unknown,,1,,,Testa,Salvaga,Single
+SF002,I0399,Antonio Navon (b.BEF 1723),,,,Unknown,,1,Navon,Antonio,,,Single
+SF003,I0400,Francesco Borisi (b.UNKNOWN),,,,Unknown,,1,Borisi,Francesco,,,Single
+SF004,I0408,Antonio Darduin (b.BEF 1685),,,,Unknown,,1,Darduin,Antonio,,,Single
+SF005,I0409,Carlo Tarsia (b.UNKNOWN),,,,Unknown,,1,Tarsia,Carlo,,,Single
+SF006,I0410,Bartolomeo Brutti (b.BEF 1700),,,,Unknown,,1,Brutti,Bartolomeo,,,Single
+SF007,I0411,Isach Ralli (b.BEF 1670),,,,Unknown,,1,Ralli,Isach,,,Single
+SF008,I0412,Giovanni Ralli (b.BEF 1750),,,,Unknown,,1,Ralli,Giovanni,,,Single
+SF009,I0417,Christoforo Ralli (b.BEF 1730),,,,Unknown,,1,Ralli,Christoforo,,,Single
+SF010,I0418,Demetrio Ralli (b.BEF 1760),,,,Unknown,,1,Ralli,Demetrio,,,Single
+SF011,I0439,Francesco Imberti (b.BEF 1685),,,,Unknown,,1,Imberti,Francesco,,,Single
