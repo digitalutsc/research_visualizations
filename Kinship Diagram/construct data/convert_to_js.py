@@ -2,22 +2,12 @@
 
 This script allows the user to read two csv files and convert it to 
 a js data file for Dragoman kinship diagram.
-
-Note 1: This tool cannot read/write unicode. (additional feature can be added later to fix this)
-If you want to include unicodes in the export files, please find and replace them all manually:
-        The�ls    ->    Theÿls
-        Gulian�   ->    Gulianò
-        Barnab�   ->    Barnabà
-        Calavr�   ->    Calavrò
-        Th�r�se  ->    Thérèse
 '''
 
 import pandas as pd
-import numpy as np
-import itertools
-import json
 import re
-import collections
+import random
+
 
 def get_family_info(family_id, families):
     '''(str, obj) -> [str, list, list]
@@ -48,7 +38,7 @@ def get_family_info(family_id, families):
     return [family_id, partner, children]
 
     
-def get_individual_info(individual_id, individuals, u):
+def get_individual_info(individual_id, individuals, u, ):
     '''(str, obj, dict) -> list
     This is a helper function for get_persons.
     It takes an individual ID and get individual information (including name, 
@@ -78,7 +68,7 @@ def get_individual_info(individual_id, individuals, u):
             dragoman, portrait, birth_year, death_year, parent_union,own_unions]
 
 
-def get_persons(individual_id,individuals,u):
+def get_persons(individual_id,individuals,u, color_palette):
     '''(str, obj, dict) -> dict
     This function is takes a individual ID and turn the individual information 
     (name, gender, birth yeat, etc.) to a dictionary containing information 
@@ -91,13 +81,13 @@ def get_persons(individual_id,individuals,u):
     
     # set family color by last name  
     family_color = ""
-    if (Surname == "Borisi"):
-        family_color = "#5983D9"
-    if (Surname == "Skovgaard"):
-        family_color = "#A63D33"
-    if(Surname == "Mascellini"):
-        family_color = "#D9AE89"
-
+    if Surname in color_palette:
+        family_color = color_palette[Surname]
+    else:
+        random_color = "#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
+        color_palette[Surname] = random_color
+        family_color = random_color
+        
     individual = {"id": individual_id, "class":individual_class, 
                   "name": individual_name, "forename": Forenames, 
                   "surname": Surname, "birthyear": birth_year, 
@@ -141,6 +131,10 @@ def loop_through(families, individuals):
     csv file. It loop through each individuals and return a dictionary
     containing all person, union, link information about all the individuals.
     '''
+    color_palette = {"Borisi": "#5983D9", "Brutti":"#A63D33", 
+                 "Mascellini":"#D9AE89", "Mamuca della Torre":"#8b0000", 
+                 "Tarsia": "#228B22", "Carli":"#800080", 
+                 "Theÿls": "#20B2AA", "Pisani": "#ff8c00", "Olivieri": "#e75480"}
     data = {"start" : "", "persons" : {}, "unions" : {}, "links" : []}
     for i in families["FamilyID"]:
         unions = get_unions(i, families)
@@ -165,7 +159,7 @@ def loop_through(families, individuals):
                 u[first]["own_unions"].append(second)
                 
     for k in individuals["IndividualID"]:
-        individual = get_persons(k, individuals, u)
+        individual = get_persons(k, individuals, u, color_palette)
         data["persons"][k] = individual
     
     return data
@@ -175,44 +169,57 @@ def loop_through(families, individuals):
     
 if __name__ == '__main__':
     # read exported by families, exported by individuals csv file
-    individuals = pd.read_csv("Gedcom Gramps 2020-05-20 export individuals - Gedcom Gramps 2020-05-20 export individuals.csv")
+    individuals = pd.read_csv("Gedcom Gramps 2020-05-20 export individuals - Gedcom Gramps 2020-05-20 export individuals.csv",encoding='utf8')
     individuals.head(1)
-    families = pd.read_csv("Gedcom Gramps 2020-05-20 export families - Gedcom Gramps 2020-05-20 export families.csv")
+    families = pd.read_csv("Gedcom Gramps 2020-05-20 export families - Gedcom Gramps 2020-05-20 export families.csv",encoding='utf8')
     families.head(1)
+    
     # loop throuhgh each individuals and prepare data for the JS files
     data = loop_through(families, individuals)
     
     # write to the JS files
     # kinship diagram 1
     data["start"] = "I0083"
-    with open('..\kinship1.js', 'a') as file:
+    with open('..\kinship1.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
     # kinship diagram 2
     data["start"] = "I0153"
-    with open('..\kinship2.js', 'a') as file:
+    with open('..\kinship2.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
     # kinship diagram 3
     data["start"] = "I0125"
-    with open('..\kinship3.js', 'a') as file:
+    with open('..\kinship3.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
     # test file
     data["start"] = "I0299"
-    with open('..\specialCharacter.js', 'a') as file:
+    with open('..\specialCharacter.js', 'w', encoding='utf8') as file:
+        file.truncate(0)
+        file.write("data = " + str(data))
+    
+    # kinship diagram 3 island top left
+    data["start"] = "I0500"
+    with open('..\kinship3_2.js', 'w', encoding='utf8') as file:
+        file.truncate(0)
+        file.write("data = " + str(data))
+    
+    # kinship diagram 3 island top left isolated person
+    data["start"] = "I0504"
+    with open('..\kinship3_3.js', 'w', encoding='utf8') as file:
+        file.truncate(0)
+        file.write("data = " + str(data))
+    
+    # kinship diagram 3 island top right
+    data["start"] = "I0505"
+    with open('..\kinship3_4.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
         
     print ("DONE!\n")
-    print ("REMINDER: This script does not support unicodes, you will need \n"+
-           "to add this mannually: \n"+
-            "The�ls    ->    Theÿls \n"+
-            "Gulian�   ->    Gulianò \n"+
-            "Barnab�   ->    Barnabà \n"+
-            "Calavr�   ->    Calavrò \n"+
-            "Th�r�se  ->    Thérèse")
+
     
