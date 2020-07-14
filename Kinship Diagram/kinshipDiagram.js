@@ -583,18 +583,18 @@ var textX = 40,
     width = 23,
     height = 10;
 
-svg.append("text").attr("x", rectX).attr("y", textY-alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 0*alignment).text("Borisi").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 1*alignment).text("Brutti").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 2*alignment).text("Mascellini").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 3*alignment).text("Mamuca della Torre").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 4*alignment).text("Tarsia").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 5*alignment).text("Carli").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 6*alignment).text("Theÿls").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 7*alignment).text("Pisani").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", textX).attr("y", textY + 8*alignment).text("Olivieri").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", rectX).attr("y", textY+ 10*alignment).text("Note: Families that are not listed ").style("font-size", "15px").attr("alignment-baseline","middle");
-svg.append("text").attr("x", rectX).attr("y", textY+ 11*alignment).text("above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle");
+svg.append("text").attr("x", rectX).attr("y", textY-alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 0*alignment).text("Borisi").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 1*alignment).text("Brutti").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 2*alignment).text("Mascellini").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 3*alignment).text("Mamuca della Torre").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 4*alignment).text("Tarsia").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 5*alignment).text("Carli").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 6*alignment).text("Theÿls").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 7*alignment).text("Pisani").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 8*alignment).text("Olivieri").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", rectX).attr("y", textY+ 10*alignment).text("Note: Families that are not listed ").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", rectX).attr("y", textY+ 11*alignment).text("above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
 svg.append("rect").attr("x", rectX).attr("y", rectY + 0*alignment).attr("width",width).attr("height",height).style("fill","#5983D9");
 svg.append("rect").attr("x", rectX).attr("y", rectY + 1*alignment).attr("width",width).attr("height",height).style("fill","#A63D33");
