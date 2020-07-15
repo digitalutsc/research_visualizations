@@ -52,7 +52,7 @@ var tip = d3.tip()
 
             content += `<br> ID: ` + d.data.id + `<br></span>`;
             if (d.data.class.includes("portrait") == true){
-                content += `<img src="portraits/Fig.0.2.Dragoman from Mamuca della Torre 1723 ONB 574.jpg" width=150 height=200> <br>`}
+                content += `<img src="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/Fig.0.2.Dragoman%20from%20Mamuca%20della%20Torre%201723%20ONB%20574.jpg" width=150 height=200> <br>`}
 
             
             return content.replace(new RegExp("null", "g"), "?")
