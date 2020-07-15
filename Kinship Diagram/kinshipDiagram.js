@@ -63,7 +63,7 @@ var tip = d3.tip()
 // append the svg object to the body of the page
 // assigns width and height
 // activates zoom/pan and tooltips
-const svg = d3.select("body").append("svg")
+const svg = d3.select("#kingship-diagram-1").append("svg")
     .attr("width", screen_width)
     .attr("height", screen_height)
     .call(zoom)
@@ -425,7 +425,7 @@ function update(source) {
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("dragoman") == true) return href="portraits/icon_dragoman_hat.png";})
+            if (d.data.class.includes("dragoman") == true) return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_dragoman_hat.png";})
         .attr("x", function(d) { return nodeX - 18;})
         .attr("y", function(d) { return nodeY;})
         .attr("height", 17)
@@ -434,7 +434,7 @@ function update(source) {
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("portrait") == true) return href="portraits/icon_portrait.png";})
+            if (d.data.class.includes("portrait") == true) return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_portrait.png";})
         .attr("x", function(d) { return nodeX - 18;})
         .attr("y", function(d) { return nodeY + 15;})
         .attr("height", 17)
