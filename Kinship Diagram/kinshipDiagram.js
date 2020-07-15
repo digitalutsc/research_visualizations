@@ -575,10 +575,10 @@ function update(source) {
 
 // ****************** Legends section ***************************
 var textX = 40,
-    textY = 30,
+    textY = 600,
 
     rectX = 10,
-    rectY = 20,
+    rectY = textY -10,
     alignment = 15,
     width = 23,
     height = 10;
