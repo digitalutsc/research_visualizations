@@ -118,8 +118,8 @@ all_nodes.forEach(n => {
 root = all_nodes.find(n => n.id == data.start);
 root.visible = true;
 root.neighbors = getNeighbors(root);
-root.x0 = screen_width * 0.5;
-root.y0 = screen_height * 0.7;
+root.x0 = screen_width * 0.2;
+root.y0 = screen_height * 0.6;
 
 // overwrite dag root nodes
 dag.children = [root];
