@@ -33,7 +33,7 @@ This code is based on [js_family_tree](https://github.com/BenPortner/js_family_t
   - [kinship1.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship1.js): Figure 2.1, The Borisi-Scoccardi-Mascellini family
   - [kinship2.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship2.js): Figure 2.2 The Brutti-Borisi-Tarsia dragoman dynasty
   - [kinship3.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3.js): Figure 4.22, The Tarsia-Carli-Mamuca della Torre portraits
-  - [kinship3_2.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_2.js): Data file for diagram #3, top left island
-  - [kinship3_3.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_3.js): Data file for diagram #3, top left isolated person
-  - [kinship3_4.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_4.js): Data file for diagram #3, top right island
+    - [kinship3_2.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_2.js): Data file for diagram #3, top left island
+    - [kinship3_3.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_3.js): Data file for diagram #3, top left isolated person
+    - [kinship3_4.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_4.js): Data file for diagram #3, top right island
 - [construct data](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram/construct%20data): Folder contains code used to generate data files 
