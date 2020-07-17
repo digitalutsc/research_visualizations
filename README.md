@@ -1,4 +1,4 @@
-# [Network Graph](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Network%20Diagram): force directed with draggable nodes and colored legend
+# [Network Graph](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Network%20Diagram): D3 force directed graph
 
 ### Features:
 - Node color represents the juridical status
@@ -12,8 +12,8 @@
 - [forceDirectedGraph.html](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirectedGraph.html): An HTML file that launch the JS file below
 - [forceDirected.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirected.js): A JS file where the main code goes
 - Data:
-  - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families included): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
-  - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families included): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
+  - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
+  - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
 
 
 # [Kinship Diagram](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram): D3-dag
