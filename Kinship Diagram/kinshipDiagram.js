@@ -24,18 +24,27 @@ for (var k in data.persons) {
 
 // Set the dimensions and margins of the diagram
 var screen_width = 1120,
-    screen_height = 800;
+    screen_height = 700;
 
-var rectHeight = 32, 
+var kinDiagram1 = "I0086",
+    kinDiagram2 = "I0163",
+    kinDiagram3 = "I0117";
+
+var rectHeight = 35, 
     rectWidth = 123;
 
-var nodeX = (rectWidth/5+ 10)*-1, 
+var nodeX = (rectWidth/5 + 15)*-1, 
     nodeY = (rectHeight/2 )*-1;
+
+// helper variables
+var i = 0,
+    duration = 700,
+    x_sep = 170,
+    y_sep = 50;
 
 // initialize panning, zooming
 var zoom = d3.zoom()
-    .on("zoom", _ => g.attr("transform", d3.event.transform));
-
+    .on("zoom", _ => g.attr("transform", d3.event.transform.scale(0.6)));
 
 // initialize tooltips
 var tip = d3.tip()
@@ -53,8 +62,6 @@ var tip = d3.tip()
             content += `<br> ID: ` + d.data.id + `<br></span>`;
             if (d.data.class.includes("portrait") == true){
                 content += `<img src="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/Fig.0.2.Dragoman%20from%20Mamuca%20della%20Torre%201723%20ONB%20574.jpg" width=150 height=200> <br>`}
-
-            
             return content.replace(new RegExp("null", "g"), "?")
         }
     );
@@ -72,12 +79,6 @@ const svg = d3.select("#kingship-diagram-1").append("svg")
 // append group element
 const g = svg.append("g");
 
-// helper variables
-var i = 0,
-    duration = 750,
-    x_sep = 160,
-    y_sep = 50;
-
 // declare a dag layout
 var tree = d3.sugiyama()
     .nodeSize([y_sep, x_sep])
@@ -85,7 +86,7 @@ var tree = d3.sugiyama()
     .decross(d3.decrossTwoLayer)
     .coord(d3.coordVert())
     .separation(
-        (a, b) => { return 0.1 }
+        (a, b) => { return 0.1}
     );
 
 // make dag from edge list
@@ -118,17 +119,51 @@ all_nodes.forEach(n => {
 root = all_nodes.find(n => n.id == data.start);
 root.visible = true;
 root.neighbors = getNeighbors(root);
-root.x0 = screen_width * 0.2;
-root.y0 = screen_height * 0.6;
+
+// find root node for kinship 1,2,3
+if (data.start == kinDiagram1){
+    root.x0 = screen_width * 0.35;
+    root.y0 = screen_height * 0.6;}
+if (data.start == kinDiagram2){
+    root.x0 = screen_width * 0.52;
+    root.y0 = screen_height * 0.55;
+}
+if (data.start == kinDiagram3){
+    root.x0 = screen_width * 0.4;
+    root.y0 = screen_height * 0.6;
+}
 
 // overwrite dag root nodes
 dag.children = [root];
 
-
-
-// draw dag
+// draw dag, expand different layouts for different diagram
 uncollapse(root);
+if (data.start == kinDiagram1){uncollapseFor1();}
+if (data.start == kinDiagram2){uncollapseFor2();}
+if (data.start == kinDiagram3){uncollapseFor3();}
 update(root);
+
+function uncollapseFor1(){
+    uncollapse(all_nodes.find(n => n.id == "I0087"));
+
+    uncollapse(all_nodes.find(n => n.id == "I0079"));
+    uncollapse(all_nodes.find(n => n.id == "I0081"));
+    uncollapse(all_nodes.find(n => n.id == "I0102"));
+}
+
+function uncollapseFor2(){
+    uncollapse(all_nodes.find(n => n.id == "I0152"));
+    uncollapse(all_nodes.find(n => n.id == "I0153"));
+    uncollapse(all_nodes.find(n => n.id == "I0091"));
+    uncollapse(all_nodes.find(n => n.id == "I0079"));
+}
+
+function uncollapseFor3(){
+    uncollapse(all_nodes.find(n => n.id == "I0096"));
+     
+    uncollapse(all_nodes.find(n => n.id == "I0125"));
+    uncollapse(all_nodes.find(n => n.id == "I0477"));
+}
 
 
 // collapse a node
@@ -425,25 +460,27 @@ function update(source) {
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("dragoman") == true) return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_dragoman_hat.png";})
-        .attr("x", function(d) { return nodeX - 18;})
-        .attr("y", function(d) { return nodeY;})
-        .attr("height", 17)
-        .attr("width", 15);
+            if (d.data.class.includes("dragoman") == true) 
+                return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_dragoman_hat.png";})
+        .attr("x", function(d) { return nodeX + 97;})
+        .attr("y", function(d) {return nodeY + 5;})
+        .attr("height", 25)
+        .attr("width", 25);
         
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("portrait") == true) return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_portrait.png";})
-        .attr("x", function(d) { return nodeX - 18;})
-        .attr("y", function(d) { return nodeY + 15;})
-        .attr("height", 17)
-        .attr("width", 17);
+            if (d.data.class.includes("hasPortrait") == true && d.data.class.includes("showPortrait")== true) 
+                return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_portrait.png";})
+        .attr("x", function(d) { return nodeX - 25;})
+        .attr("y", function(d) { return nodeY + 5;})
+        .attr("height", 25)
+        .attr("width", 25);
     
     // Add names as node labels
     nodeEnter.append('text')
         .attr("dy", ".35em")
-        .attr("x", nodeX+5)
+        .attr("x", nodeX + 5)
         .attr("y", nodeY + 10)
         .attr("text-anchor", "start")
         .text(function(d) {
@@ -452,7 +489,7 @@ function update(source) {
         
         .append("tspan")
         .attr("dy", "1.25em")
-        .attr("x", nodeX+5)
+        .attr("x", nodeX + 5)
         .attr("text-anchor", "start")
         .text(function (d) {
             if (d.data.isUnion) return;
@@ -547,19 +584,17 @@ function update(source) {
         d.y0 = d.y;
     });
 
-
     // Creates a curved (diagonal) path from parent to the child nodes
     function diagonal(s, d) {
         path = `M ${s.y} ${s.x}
-                C ${(s.y + d.y+ 180) / 2} ${s.x},
-                    ${(s.y + d.y - 50) / 2} ${d.x},
+                C ${(s.y + d.y + 200) / 2} ${s.x},
+                    ${(s.y + d.y - 30) / 2} ${d.x},
                     ${d.y} ${d.x}`
         return path
     }
 
     // Toggle unions, children, partners on click.
     function click(d) {
-
         // do nothing if node is union
         if (d.data.isUnion) return;
 
@@ -575,34 +610,38 @@ function update(source) {
 
 // ****************** Legends section ***************************
 var textX = 40,
-    textY = 600,
+    textY = 480,
+    noteX = 200,
 
-    rectX = 10,
-    rectY = textY -10,
+    rectX = textX - 30,
+    rectY = textY - 10,
     alignment = 15,
     width = 23,
     height = 10;
 
-svg.append("text").attr("x", rectX).attr("y", textY-alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 0*alignment).text("Borisi").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 1*alignment).text("Brutti").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 2*alignment).text("Mascellini").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 3*alignment).text("Mamuca della Torre").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 4*alignment).text("Tarsia").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 5*alignment).text("Carli").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 6*alignment).text("Theÿls").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 7*alignment).text("Pisani").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", textX).attr("y", textY + 8*alignment).text("Olivieri").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", rectX).attr("y", textY+ 10*alignment).text("Note: Families that are not listed ").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", rectX).attr("y", textY+ 11*alignment).text("above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Note 1: Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Note 2: Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", noteX).attr("y", textY + 10*alignment).text("Note 3: Families that are not listed above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
-svg.append("rect").attr("x", rectX).attr("y", rectY + 0*alignment).attr("width",width).attr("height",height).style("fill","#5983D9");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 1*alignment).attr("width",width).attr("height",height).style("fill","#A63D33");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 2*alignment).attr("width",width).attr("height",height).style("fill","#D9AE89");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 3*alignment).attr("width",width).attr("height",height).style("fill","#8b0000");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 4*alignment).attr("width",width).attr("height",height).style("fill","#228B22");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 5*alignment).attr("width",width).attr("height",height).style("fill","#800080");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 6*alignment).attr("width",width).attr("height",height).style("fill","#20B2AA");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 7*alignment).attr("width",width).attr("height",height).style("fill","#ff8c009");
-svg.append("rect").attr("x", rectX).attr("y", rectY + 8*alignment).attr("width",width).attr("height",height).style("fill","#e75480");
+svg.append("text").attr("x", rectX).attr("y", textY + 0*alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 1*alignment).text("Borisi").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 2*alignment).text("Brutti").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 3*alignment).text("Mascellini").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 4*alignment).text("Mamuca della Torre").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 5*alignment).text("Tarsia").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 6*alignment).text("Carli").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 7*alignment).text("Theÿls").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 8*alignment).text("Pisani").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 9*alignment).text("Olivieri").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", textX).attr("y", textY + 10*alignment).text("Other").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
+svg.append("rect").attr("x", rectX).attr("y", rectY + 1*alignment).attr("width",width).attr("height",height).style("fill","#A6692B");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 2*alignment).attr("width",width).attr("height",height).style("fill","#749983");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 3*alignment).attr("width",width).attr("height",height).style("fill","#A69F4C");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 4*alignment).attr("width",width).attr("height",height).style("fill","#5B6658");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 5*alignment).attr("width",width).attr("height",height).style("fill","#B39D91");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 6*alignment).attr("width",width).attr("height",height).style("fill","#2E4F59");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 7*alignment).attr("width",width).attr("height",height).style("fill","#A63D33");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 8*alignment).attr("width",width).attr("height",height).style("fill","#593640");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 9*alignment).attr("width",width).attr("height",height).style("fill","#374E99");
+svg.append("rect").attr("x", rectX).attr("y", rectY + 10*alignment).attr("width",width).attr("height",height).style("fill","#C0C0C0");
