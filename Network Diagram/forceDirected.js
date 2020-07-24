@@ -188,8 +188,8 @@ svg.append("text").attr("x", circleX-10).attr("y", circleY-6*alignment).text("Su
 
 // marriage link
 svg.append("line").attr("x1",lineX).attr("y1",lineY-3*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-3*alignment).attr("stroke-width", 1*3.8).attr("stroke", "#bdbdbd");
-svg.append("line").attr("x1",lineX).attr("y1",lineY-2*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-2*alignment).attr("stroke-width", 2*3.8).style("fill", "#bdbdbd");
-svg.append("line").attr("x1",lineX).attr("y1",lineY-1*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-1*alignment).attr("stroke-width", 3*3.8).style("fill", "#bdbdbd");
+svg.append("line").attr("x1",lineX).attr("y1",lineY-2*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-2*alignment).attr("stroke-width", 2*3.8).attr("stroke", "#bdbdbd");
+svg.append("line").attr("x1",lineX).attr("y1",lineY-1*alignment).attr("x2",lineX+lineLength).attr("y2",lineY-1*alignment).attr("stroke-width", 3*3.8).attr("stroke", "#bdbdbd");
 svg.append("text").attr("x", lineTextX).attr("y", lineTextY-3*alignment).text("1 marriage").style("font-size", "15px").attr("alignment-baseline","middle");
 svg.append("text").attr("x", lineTextX).attr("y", lineTextY-2*alignment).text("2 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
 svg.append("text").attr("x", lineTextX).attr("y", lineTextY-1*alignment).text("3 marriages").style("font-size", "15px").attr("alignment-baseline","middle");
