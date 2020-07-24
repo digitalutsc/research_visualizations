@@ -1,7 +1,7 @@
 // extend javascript array class by a remove function
 // copied from https://stackoverflow.com/a/3955096/12267732
-
 //check https://stackoverflow.com/questions/60107431/d3-tree-with-collapsing-boxes-using-d3-version-4
+
 Array.prototype.remove = function () {
     var what, a = arguments, L = a.length, ax;
     while (L && this.length) {
@@ -28,7 +28,10 @@ var screen_width = 1120,
 
 var kinDiagram1 = "I0086",
     kinDiagram2 = "I0163",
-    kinDiagram3 = "I0117";
+    kinDiagram3 = "I0117"
+    kinDiagram3_2 = "I0500",
+    kinDiagram3_3 = "I0504",
+    kinDiagram3_4 = "I0505";
 
 var rectHeight = 35, 
     rectWidth = 123;
@@ -46,6 +49,7 @@ var i = 0,
 var zoom = d3.zoom()
     .on("zoom", _ => g.attr("transform", d3.event.transform.scale(0.6)));
 
+
 // initialize tooltips
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -57,11 +61,13 @@ var tip = d3.tip()
             var content = "<b>" + d.data.name + "</b>"
 
             if (d.data.class.includes("dragoman") == true){
-                content += "<b> is a dragoman </b>"}
+                content += "<b> (dragoman) </b>"}
 
             content += `<br> ID: ` + d.data.id + `<br></span>`;
-            if (d.data.class.includes("portrait") == true){
-                content += `<img src="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/Fig.0.2.Dragoman%20from%20Mamuca%20della%20Torre%201723%20ONB%20574.jpg" width=150 height=200> <br>`}
+            if (d.data.class.includes("showPortrait") == true && d.data.class.includes("hasPortrait") == true){
+                // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
+                basePath = `portraits/`
+                content += `<img src="`+ basePath + d.data.portrait+`" width=150 height=200> <br>`}
             return content.replace(new RegExp("null", "g"), "?")
         }
     );
@@ -123,13 +129,26 @@ root.neighbors = getNeighbors(root);
 // find root node for kinship 1,2,3
 if (data.start == kinDiagram1){
     root.x0 = screen_width * 0.35;
-    root.y0 = screen_height * 0.6;}
+    root.y0 = screen_height * 0.6;
+}
 if (data.start == kinDiagram2){
     root.x0 = screen_width * 0.52;
     root.y0 = screen_height * 0.55;
 }
 if (data.start == kinDiagram3){
-    root.x0 = screen_width * 0.4;
+    root.x0 = screen_width * 0.45;
+    root.y0 = screen_height * 0.6;
+}
+if (data.start == kinDiagram3_2){
+    root.x0 = screen_width * 0.1;
+    root.y0 = screen_height * 0.5;
+}
+if (data.start == kinDiagram3_3){
+    root.x0 = screen_width * 0.1;
+    root.y0 = screen_height * 0.6;
+}
+if (data.start == kinDiagram3_4){
+    root.x0 = screen_width * 0.1;
     root.y0 = screen_height * 0.6;
 }
 
@@ -140,7 +159,7 @@ dag.children = [root];
 uncollapse(root);
 if (data.start == kinDiagram1){uncollapseFor1();}
 if (data.start == kinDiagram2){uncollapseFor2();}
-if (data.start == kinDiagram3){uncollapseFor3();}
+if (data.start == kinDiagram3){uncollapseFor3();} 
 update(root);
 
 function uncollapseFor1(){
@@ -163,8 +182,8 @@ function uncollapseFor3(){
      
     uncollapse(all_nodes.find(n => n.id == "I0125"));
     uncollapse(all_nodes.find(n => n.id == "I0477"));
+    uncollapse(all_nodes.find(n => n.id == "I0386"));
 }
-
 
 // collapse a node
 function collapse(d) {
@@ -418,10 +437,6 @@ function find_path(n) {
     return result
 }
 
-function expandAll(root){
-    
-}
-
 function update(source) {
 
     // Assigns the x and y position for the nodes
@@ -460,8 +475,10 @@ function update(source) {
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("dragoman") == true) 
-                return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_dragoman_hat.png";})
+            if (d.data.class.includes("dragoman") == true){
+                basePath =  "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/"
+                // basePath = "portraits/"
+                return href = basePath + "icon_dragoman_hat.png";}})
         .attr("x", function(d) { return nodeX + 97;})
         .attr("y", function(d) {return nodeY + 5;})
         .attr("height", 25)
@@ -470,8 +487,10 @@ function update(source) {
     nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) {
             if (d.data.isUnion) return;
-            if (d.data.class.includes("hasPortrait") == true && d.data.class.includes("showPortrait")== true) 
-                return href="https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/icon_portrait.png";})
+            if (d.data.class.includes("hasPortrait") == true && d.data.class.includes("showPortrait")== true){
+                basePath =  "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/"
+                // basePath = "portraits/"
+                 return href= basePath + "icon_portrait.png";}})
         .attr("x", function(d) { return nodeX - 25;})
         .attr("y", function(d) { return nodeY + 5;})
         .attr("height", 25)
@@ -480,7 +499,7 @@ function update(source) {
     // Add names as node labels
     nodeEnter.append('text')
         .attr("dy", ".35em")
-        .attr("x", nodeX + 5)
+        .attr("x", nodeX+5)
         .attr("y", nodeY + 10)
         .attr("text-anchor", "start")
         .text(function(d) {
@@ -541,8 +560,7 @@ function update(source) {
     var link = g.selectAll('path.link')
         .data(links, function (d) { return d.source.id + d.target.id });
         
-        
-
+    
     // Enter any new links at the parent's previous position.
     var linkEnter = link.enter().insert('path', "g")
         .attr("class", "link")
@@ -584,6 +602,7 @@ function update(source) {
         d.y0 = d.y;
     });
 
+
     // Creates a curved (diagonal) path from parent to the child nodes
     function diagonal(s, d) {
         path = `M ${s.y} ${s.x}
@@ -611,18 +630,32 @@ function update(source) {
 // ****************** Legends section ***************************
 var textX = 40,
     textY = 480,
-    noteX = 200,
+    noteX = 710,
 
     rectX = textX - 30,
     rectY = textY - 10,
     alignment = 15,
     width = 23,
-    height = 10;
+    height = 10,
 
-svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Note 1: Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Note 2: Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", noteX).attr("y", textY + 10*alignment).text("Note 3: Families that are not listed above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+    icon_width = 20,
+    icon_height = 20;
 
+// legend for portrait icon
+if (data.start == kinDiagram3){
+    svg.append("image").attr("x", noteX + 295).attr("y", textY + 3*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {return "portraits/icon_portrait.png";});
+    svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 4*alignment).text("Portrait").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+}
+// legend for dragoman icon
+svg.append("image").attr("x", noteX+ 295).attr("y", textY + 5*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {return "portraits/icon_dragoman_hat.png";});
+svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 6*alignment).text("Dragoman").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+    
+// legend for note 
+svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+svg.append("text").attr("x", noteX).attr("y", textY + 10*alignment).text("Families that are not listed above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
+
+/* legend for node color by surname
 svg.append("text").attr("x", rectX).attr("y", textY + 0*alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", textX).attr("y", textY + 1*alignment).text("Borisi").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", textX).attr("y", textY + 2*alignment).text("Brutti").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
@@ -634,7 +667,6 @@ svg.append("text").attr("x", textX).attr("y", textY + 7*alignment).text("Theÿls
 svg.append("text").attr("x", textX).attr("y", textY + 8*alignment).text("Pisani").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", textX).attr("y", textY + 9*alignment).text("Olivieri").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", textX).attr("y", textY + 10*alignment).text("Other").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-
 svg.append("rect").attr("x", rectX).attr("y", rectY + 1*alignment).attr("width",width).attr("height",height).style("fill","#A6692B");
 svg.append("rect").attr("x", rectX).attr("y", rectY + 2*alignment).attr("width",width).attr("height",height).style("fill","#749983");
 svg.append("rect").attr("x", rectX).attr("y", rectY + 3*alignment).attr("width",width).attr("height",height).style("fill","#A69F4C");
@@ -645,3 +677,4 @@ svg.append("rect").attr("x", rectX).attr("y", rectY + 7*alignment).attr("width",
 svg.append("rect").attr("x", rectX).attr("y", rectY + 8*alignment).attr("width",width).attr("height",height).style("fill","#593640");
 svg.append("rect").attr("x", rectX).attr("y", rectY + 9*alignment).attr("width",width).attr("height",height).style("fill","#374E99");
 svg.append("rect").attr("x", rectX).attr("y", rectY + 10*alignment).attr("width",width).attr("height",height).style("fill","#C0C0C0");
+*/
