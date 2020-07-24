@@ -8,16 +8,16 @@
 - Tooltip
 - Legends
 
-### Demos
-- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-1
-- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-2
-
 ### Files
 - [forceDirectedGraph.html](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirectedGraph.html): An HTML file that launch the JS file below
 - [forceDirected.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirected.js): A JS file where the main code goes
 - Data:
   - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
   - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
+
+### Demos
+- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-1
+- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-2
 
 
 # [Kinship Diagram](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram): D3-dag
@@ -43,6 +43,6 @@ This code is based on [js_family_tree](https://github.com/BenPortner/js_family_t
 - [construct data](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram/construct%20data): Used to generate data for kinship diagrams
 
 ### Demos
-- Diagram 1: http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-1
-- Diagram 2: http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-2
-- Diagram 3: http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-3
+- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-1
+- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-2
+- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-3
