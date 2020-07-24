@@ -62,12 +62,18 @@ var tip = d3.tip()
 
             if (d.data.class.includes("dragoman") == true){
                 content += "<b> (dragoman) </b>"}
+            
+            if (d.data.birthyear != "?" && d.data.deathyear != "?"){
+                content += `<br>` + d.data.birthyear +` - ` + d.data.deathyear
+            }
+            else {content += `<br> UNKNOWN`}
 
             content += `<br> ID: ` + d.data.id + `<br></span>`;
             if (d.data.class.includes("showPortrait") == true && d.data.class.includes("hasPortrait") == true){
-                basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
-                // basePath = `portraits/`
+                // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
+                basePath = `portraits/`
                 content += `<img src="`+ basePath + d.data.portrait+`" width=150 height=200> <br>`}
+
             return content.replace(new RegExp("null", "g"), "?")
         }
     );
