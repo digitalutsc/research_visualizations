@@ -2,6 +2,9 @@
 
 This script allows the user to read two csv files and convert it to 
 a js data file for Dragoman kinship diagram.
+
+Note: Portrait icon should NOT be shown in kinship diagram 1 & 2.
+      This means we need to run the script seperatly for diagram 1&2 and diagram 3
 '''
 
 import pandas as pd
@@ -50,22 +53,20 @@ def get_individual_info(individual_id, individuals, u, ):
     Forenames = str(individual_info["Forenames"]).strip()
     Surname = str(individual_info["Surname"]).strip()
     individual_name = Forenames + " " + Surname
-    Occupation = str(individual_info["Occupation"]).strip().lower()
-    Portrait = str(individual_info["has Portrait?"]).strip().lower()
+    Occupation = str(individual_info["is Dragoman?"]).strip().lower()
+    portrait_filename = str(individual_info["Portrait Filename"]).strip().lower()
     parent_union = str(u[individual_id]["parent_union"])
     own_unions = u[individual_id]["own_unions"]
     
     dragoman = ""
-    if "dragoman" in Occupation:
+    if "y" in Occupation:
         dragoman = "dragoman"
-    portrait = ""
-    if "portrait" in Portrait:
-        portrait  = "portrait"
+
     birth_year = str(individual_info["BirthDate"]).strip()
     death_year = str(individual_info["DeathDate"]).strip()
 
     return [individual_id, individual_name, Forenames, Surname, gender,
-            dragoman, portrait, birth_year, death_year, parent_union,own_unions]
+            dragoman, portrait_filename, birth_year, death_year, parent_union,own_unions]
 
 
 def get_persons(individual_id,individuals,u, color_palette):
@@ -77,20 +78,32 @@ def get_persons(individual_id,individuals,u, color_palette):
     (individual_id, individual_name, Forenames, Surname, gender, 
      dragoman, portrait, birth_year, death_year, parent_union, 
      own_unions) = get_individual_info(individual_id, individuals, u)
-    individual_class = gender + " " + dragoman + " " + portrait
+    individual_class = gender + " " + dragoman 
+    
+    if (portrait !="nan"):
+        individual_class += " hasPortrait"
+        
+    # used to hide portrait for diagram 1 & diagram 2
+    individual_class += " hidePortrait"
+    
+    # used to show portrait for diagram 3
+    # individual_class += " showPortrait"
     
     # set family color by last name  
     family_color = ""
     if Surname in color_palette:
         family_color = color_palette[Surname]
     else:
+        '''# set people not in color_palette list to a random color
         random_color = "#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
-        color_palette[Surname] = random_color
+        color_palette[Surname] = random_color'''
+        # set people not in the color_palette list to grey
+        random_color = "#C0C0C0"
         family_color = random_color
         
     individual = {"id": individual_id, "class":individual_class, 
                   "name": individual_name, "forename": Forenames, 
-                  "surname": Surname, "birthyear": birth_year, 
+                  "surname": Surname, "portrait": portrait, "birthyear": birth_year, 
                   "deathyear": death_year, "own_unions":own_unions}
     if (parent_union != ""):
         individual["parent_union"] = parent_union
@@ -131,10 +144,10 @@ def loop_through(families, individuals):
     csv file. It loop through each individuals and return a dictionary
     containing all person, union, link information about all the individuals.
     '''
-    color_palette = {"Borisi": "#5983D9", "Brutti":"#A63D33", 
-                 "Mascellini":"#D9AE89", "Mamuca della Torre":"#8b0000", 
-                 "Tarsia": "#228B22", "Carli":"#800080", 
-                 "Theÿls": "#20B2AA", "Pisani": "#ff8c00", "Olivieri": "#e75480"}
+    color_palette = {"Borisi": "#A6692B", "Brutti":"#749983", 
+                 "Mascellini":"#A69F4C", "Mamuca della Torre":"#5B6658", 
+                 "Tarsia": "#B39D91", "Carli":"#2E4F59", "Don Carli":"#2E4F59", 
+                 "Theÿls": "#A63D33", "Pisani": "#593640", "Olivieri": "#374E99"}
     data = {"start" : "", "persons" : {}, "unions" : {}, "links" : []}
     for i in families["FamilyID"]:
         unions = get_unions(i, families)
@@ -174,28 +187,30 @@ if __name__ == '__main__':
     families = pd.read_csv("Gedcom Gramps 2020-05-20 export families - Gedcom Gramps 2020-05-20 export families.csv",encoding='utf8')
     families.head(1)
     
-    # loop throuhgh each individuals and prepare data for the JS files
     data = loop_through(families, individuals)
-    
     # write to the JS files
+    
+    
     # kinship diagram 1
-    data["start"] = "I0083"
+    data["start"] = "I0086"
     with open('..\kinship1.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
     # kinship diagram 2
-    data["start"] = "I0153"
+    data["start"] = "I0163"
     with open('..\kinship2.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
+    '''
     # kinship diagram 3
-    data["start"] = "I0125"
+    data["start"] = "I0117"
     with open('..\kinship3.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
     
+
     # test file
     data["start"] = "I0299"
     with open('..\specialCharacter.js', 'w', encoding='utf8') as file:
@@ -219,7 +234,6 @@ if __name__ == '__main__':
     with open('..\kinship3_4.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
+    '''
         
     print ("DONE!\n")
-
-    
