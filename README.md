@@ -1,4 +1,4 @@
-# [Network Graph](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Network%20Diagram): D3 force directed graph
+# Network Graph: D3 force directed graph
 
 ### Features:
 - Node color represents the juridical status
@@ -20,7 +20,7 @@
 - https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-2
 
 
-# [Kinship Diagram](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram): D3-dag
+# Kinship Diagram: D3-dag
 This code is based on [js_family_tree](https://github.com/BenPortner/js_family_tree) by BenPortner
 
 ### Features:
