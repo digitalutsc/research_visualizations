@@ -57,14 +57,22 @@ def get_individual_info(individual_id, individuals, u, ):
     portrait_filename = str(individual_info["Portrait Filename"]).strip().lower()
     parent_union = str(u[individual_id]["parent_union"])
     own_unions = u[individual_id]["own_unions"]
+    birth_year = str(individual_info["BirthDate"]).strip()
+    death_year = str(individual_info["DeathDate"]).strip()
     
     dragoman = ""
     if "y" in Occupation:
         dragoman = "dragoman"
 
-    birth_year = str(individual_info["BirthDate"]).strip()
-    death_year = str(individual_info["DeathDate"]).strip()
-
+    birth_year = birth_year.replace("ca. ","")
+    birth_year = birth_year.replace("<", "")
+    birth_year = birth_year.replace(">", "")
+    birth_year = birth_year.replace("UNKNOWN", "?")
+    birth_year = birth_year.replace("nan", "?")
+    death_year = death_year.replace("<", "")
+    death_year = death_year.replace(">", "")
+    death_year = death_year.replace("UNKNOWN", "?")
+    death_year = death_year.replace("nan", "?")
     return [individual_id, individual_name, Forenames, Surname, gender,
             dragoman, portrait_filename, birth_year, death_year, parent_union,own_unions]
 
@@ -84,10 +92,10 @@ def get_persons(individual_id,individuals,u, color_palette):
         individual_class += " hasPortrait"
         
     # used to hide portrait for diagram 1 & diagram 2
-    individual_class += " hidePortrait"
+    # individual_class += " hidePortrait"
     
     # used to show portrait for diagram 3
-    # individual_class += " showPortrait"
+    individual_class += " showPortrait"
     
     # set family color by last name  
     family_color = ""
@@ -190,7 +198,7 @@ if __name__ == '__main__':
     data = loop_through(families, individuals)
     # write to the JS files
     
-    
+    '''
     # kinship diagram 1
     data["start"] = "I0086"
     with open('..\kinship1.js', 'w', encoding='utf8') as file:
@@ -234,6 +242,6 @@ if __name__ == '__main__':
     with open('..\kinship3_4.js', 'w', encoding='utf8') as file:
         file.truncate(0)
         file.write("data = " + str(data))
-    '''
+    
         
     print ("DONE!\n")
