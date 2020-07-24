@@ -138,7 +138,7 @@ if (data.start == kinDiagram1){
     root.y0 = screen_height * 0.6;
 }
 if (data.start == kinDiagram2){
-    root.x0 = screen_width * 0.52;
+    root.x0 = screen_width * 0.6;
     root.y0 = screen_height * 0.55;
 }
 if (data.start == kinDiagram3){
