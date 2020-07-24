@@ -65,8 +65,8 @@ var tip = d3.tip()
 
             content += `<br> ID: ` + d.data.id + `<br></span>`;
             if (d.data.class.includes("showPortrait") == true && d.data.class.includes("hasPortrait") == true){
-                // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
-                basePath = `portraits/`
+                basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
+                // basePath = `portraits/`
                 content += `<img src="`+ basePath + d.data.portrait+`" width=150 height=200> <br>`}
             return content.replace(new RegExp("null", "g"), "?")
         }
