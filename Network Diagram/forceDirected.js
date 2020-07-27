@@ -75,13 +75,11 @@ d3.json("https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/fil
                 .style("width", "200px")
                 .style("height", "45px");
            })
-      .on('mouseover.fade', fade(0.1))
       .on("mouseout", function(d) {
         div.transition()
             .duration(500)
             .style("opacity", 0);
       })
-      .on('mouseout.fade', fade(1))
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -126,26 +124,6 @@ function dragstarted(d) {
 function dragged(d) {
   d.fx = d3.event.x;
   d.fy = d3.event.y;
-}
-
-const linkedByIndex = {};
-graph.links.forEach(d => {
-  linkedByIndex[`${d.source.index},${d.target.index}`] = 1;
-});
-
-function isConnected(a, b) {
-    return linkedByIndex[`${a.index},${b.index}`] || linkedByIndex[`${b.index},${a.index}`] || a.index === b.index;
-  }
-
-function fade(opacity) {
-    return d => {
-      node.style('stroke-opacity', function (o) {
-        const thisOpacity = isConnected(d, o) ? 1 : opacity;
-        this.setAttribute('fill-opacity', thisOpacity);
-        return thisOpacity;
-      });
-      link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : opacity));
-    };
 }
     
 function dragended(d) {
