@@ -636,7 +636,7 @@ function update(source) {
 // ****************** Legends section ***************************
 var textX = 40,
     textY = 480,
-    noteX = 710,
+    noteX = 690,
 
     rectX = textX - 30,
     rectY = textY - 10,
