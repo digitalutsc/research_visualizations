@@ -47,7 +47,7 @@ var i = 0,
 
 // initialize panning, zooming
 var zoom = d3.zoom()
-    .on("zoom", _ => g.attr("transform", d3.event.transform.scale(0.6)));
+    .on("zoom", _ => g.attr("transform", d3.event.transform.scale(0.7)));
 
 
 // initialize tooltips
@@ -73,7 +73,9 @@ var tip = d3.tip()
                 // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
                 basePath = `portraits/`
                 content += `<img src="`+ basePath + d.data.portrait+`" width=150 height=200> <br>`}
-
+            
+            if (d.data.class.includes("portraitUnconfirmed") == true){content += "<br> Note: Presumed portrait for " + d.data.name}
+            
             return content.replace(new RegExp("null", "g"), "?")
         }
     );
@@ -138,8 +140,8 @@ if (data.start == kinDiagram1){
     root.y0 = screen_height * 0.6;
 }
 if (data.start == kinDiagram2){
-    root.x0 = screen_width * 0.6;
-    root.y0 = screen_height * 0.55;
+    root.x0 = screen_width * 0.59;
+    root.y0 = screen_height * 0.6;
 }
 if (data.start == kinDiagram3){
     root.x0 = screen_width * 0.45;
@@ -178,7 +180,6 @@ function uncollapseFor1(){
 
 function uncollapseFor2(){
     uncollapse(all_nodes.find(n => n.id == "I0152"));
-    uncollapse(all_nodes.find(n => n.id == "I0153"));
     uncollapse(all_nodes.find(n => n.id == "I0091"));
     uncollapse(all_nodes.find(n => n.id == "I0079"));
 }
@@ -664,7 +665,6 @@ svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 6*align
 // legend for note 
 svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-svg.append("text").attr("x", noteX).attr("y", textY + 10*alignment).text("Families that are not listed above are set to a random color").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
 /* legend for node color by surname
 svg.append("text").attr("x", rectX).attr("y", textY + 0*alignment).text("Node Color by Surname:").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
