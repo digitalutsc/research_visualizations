@@ -647,15 +647,20 @@ var textX = 40,
     icon_width = 20,
     icon_height = 20;
 
-// legend for portrait icon
+// legend for portrait and dragoman icon
 if (data.start == kinDiagram3){
-    svg.append("image").attr("x", noteX + 295).attr("y", textY + 3*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {return "portraits/icon_portrait.png";});
+    svg.append("image").attr("x", noteX + 295).attr("y", textY + 3*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {
+        // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
+        basePath = `portraits/`
+        return basePath + "icon_portrait.png";});
     svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 4*alignment).text("Portrait").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 }
-// legend for dragoman icon
-svg.append("image").attr("x", noteX+ 295).attr("y", textY + 5*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {return "portraits/icon_dragoman_hat.png";});
+svg.append("image").attr("x", noteX+ 295).attr("y", textY + 5*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {
+    // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
+    basePath = `portraits/`
+    return basePath + "icon_dragoman_hat.png";});
 svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 6*alignment).text("Dragoman").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
-    
+
 // legend for note 
 svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
