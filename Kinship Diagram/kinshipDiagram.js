@@ -3,11 +3,11 @@
 // https://stackoverflow.com/questions/60107431/d3-tree-with-collapsing-boxes-using-d3-version-4
 // https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
 
-basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/"
-// basePath = ""
+// basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/";
+// basePath = "";
 
-treeData = basePath + "kinship1.js"
-showKinshipDiagram(treeData)
+// treeData = basePath + "kinship1.js";
+// showKinshipDiagram(treeData);
 
 
 function showKinshipDiagram(treeData){
@@ -53,7 +53,11 @@ function showKinshipDiagram(treeData){
         // Set the dimensions and margins of the diagram
         var screen_width = 1120,
             screen_height = 700;
-
+        
+        //base path for diagrams
+        var basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/";
+        // var basePath = `portraits/`
+        
         var kinDiagram1 = "I0086",
             kinDiagram2 = "I0163",
             kinDiagram3 = "I0117"
@@ -98,8 +102,6 @@ function showKinshipDiagram(treeData){
 
                     content += `<br> ID: ` + d.data.id + `<br></span>`;
                     if (d.data.class.includes("showPortrait") == true && d.data.class.includes("hasPortrait") == true){
-                        // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
-                        basePath = `portraits/`
                         content += `<img src="`+ basePath + d.data.portrait+`" width=150 height=200> <br>`}
 
                     if (d.data.class.includes("portraitUnconfirmed") == true){content += "<br> Note: Presumed portrait for " + d.data.name}
@@ -116,7 +118,7 @@ function showKinshipDiagram(treeData){
             .attr("width", screen_width)
             .attr("height", screen_height)
             .call(zoom)
-            .call(tip)
+            .call(tip);
 
         // append group element
         const g = svg.append("g");
@@ -511,8 +513,6 @@ function showKinshipDiagram(treeData){
                 .attr("xlink:href",  function(d) {
                     if (d.data.isUnion) return;
                     if (d.data.class.includes("dragoman") == true){
-                        basePath =  "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/"
-                        // basePath = "portraits/"
                         return href = basePath + "icon_dragoman_hat.png";}})
                 .attr("x", function(d) { return nodeX + 97;})
                 .attr("y", function(d) {return nodeY + 5;})
@@ -523,8 +523,6 @@ function showKinshipDiagram(treeData){
                 .attr("xlink:href",  function(d) {
                     if (d.data.isUnion) return;
                     if (d.data.class.includes("hasPortrait") == true && d.data.class.includes("showPortrait")== true){
-                        basePath =  "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/"
-                        // basePath = "portraits/"
                          return href= basePath + "icon_portrait.png";}})
                 .attr("x", function(d) { return nodeX - 25;})
                 .attr("y", function(d) { return nodeY + 5;})
@@ -679,14 +677,10 @@ function showKinshipDiagram(treeData){
         // legend for portrait and dragoman icon
         if (data.start == kinDiagram3){
             svg.append("image").attr("x", noteX + 295).attr("y", textY + 3*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {
-                // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
-                basePath = `portraits/`
                 return basePath + "icon_portrait.png";});
             svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 4*alignment).text("Portrait").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
         }
         svg.append("image").attr("x", noteX+ 295).attr("y", textY + 5*alignment).attr("width",icon_width).attr("height",icon_height).attr("xlink:href", function (d) {
-            // basePath =  `https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/`
-            basePath = `portraits/`
             return basePath + "icon_dragoman_hat.png";});
         svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 6*alignment).text("Dragoman").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
