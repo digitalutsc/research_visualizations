@@ -3,10 +3,10 @@
 // https://stackoverflow.com/questions/60107431/d3-tree-with-collapsing-boxes-using-d3-version-4
 // https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
 
-// basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/";
-// basePath = "";
+// var basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/";
+// var basePath = "";
 
-// treeData = basePath + "kinship1.js";
+// var treeData = basePath + "kinship1.js";
 // showKinshipDiagram(treeData);
 
 
