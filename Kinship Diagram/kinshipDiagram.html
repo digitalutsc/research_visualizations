@@ -16,58 +16,17 @@
 -->
 
 <meta charset="UTF-8">
-<meta charset = "U+00FF">
+
 <title>Kinship</title>
-<style>
-    body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .node rect {
-        fill: rgb(160, 160, 160);
-        stroke-width: 4px;
-    }
-
-    .node text{
-        font: 10px sans-serif;
-        fill: whitesmoke;
-    }
-
-    .link {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: 3px;
-        shape-rendering: geometricPrecision;
-    }
-
-    .link:hover{
-        stroke: darkred;
-    }
-
-    .d3-tip {
-        font: 12px sans-serif;
-        padding: 12px;
-        background: rgb(175, 175, 175);
-        opacity: 0.1;
-        color: #fff;
-        border-radius: 10px;
-    }
-
-    svg {
-        border-width: 1px;
-        border-radius: 10px;
-    }
-</style>
-
 <h1>Kinship Diagram</h1>
 <body>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-dag@0.3.4/dist/d3-dag.min.js"></script>
     
     <script src = "kinshipDiagram.js"></script>
+    <link rel="stylesheet" type="text/css" href="kinshipDiagram.css">
     <div height="700" id="kingship-diagram-1" width="800"></div>
+    
 </body>
 </html>
