@@ -15,10 +15,6 @@
   - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
   - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
 
-### Demos
-- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-1
-- https://dragomans.digitalscholarship.utsc.utoronto.ca/dragomans-visualization-2
-
 
 # Kinship Diagram: D3-dag
 This code is based on [js_family_tree](https://github.com/BenPortner/js_family_tree) by BenPortner
@@ -42,7 +38,4 @@ This code is based on [js_family_tree](https://github.com/BenPortner/js_family_t
     - [kinship3_4.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Kinship%20Diagram/kinship3_4.js): Data file for diagram #3, top right island
 - [construct data](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram/construct%20data): Used to generate data for kinship diagrams
 
-### Demos
-- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-1
-- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-2
-- http://dragomans.digitalscholarship.utsc.utoronto.ca/kinship-diagram-3
+
