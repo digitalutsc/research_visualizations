@@ -1,0 +1,315 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "url": "https://blogs.timesofisrael.com/10-things-id-like-to-change-about-life-in-israel/",
+            "val": 1,
+            "site": "http://timesofisrael.com/",
+            "authors": "unknown",
+            "title": "10 Things I'd Like To Change About Life in Israel",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "None",
+            "is_referring": true,
+            "is_source": false,
+            "matched_source_sites": [
+                {
+                    "matched": true,
+                    "site": "http://jpost.com",
+                    "url": "https://www.jpost.com/israel-news/middle-israel-time-to-shed-the-complex-of-yeridah-569871"
+                },
+                {
+                    "matched": true,
+                    "site": "http://globes.co.il",
+                    "url": "https://en.globes.co.il/en/article-amazon-halts-free-shipments-to-israel-1001322732"
+                },
+                {
+                    "matched": true,
+                    "site": "http://ynetnews.com",
+                    "url": "https://www.ynetnews.com/business/article/By5ba11dfL"
+                },
+                {
+                    "matched": true,
+                    "site": "http://ynetnews.com",
+                    "url": "https://www.ynetnews.com/articles/0,7340,L-4633784,00.html"
+                },
+                {
+                    "matched": true,
+                    "site": "http://jpost.com",
+                    "url": "https://www.jpost.com/opinion/the-jerusalem-cable-car-610932"
+                }
+            ],
+            "matched_keywords": "Jerusalem Post"
+        },
+        {
+            "id": 1,
+            "url": "https://www.jpost.com/israel-news/middle-israel-time-to-shed-the-complex-of-yeridah-569871",
+            "val": 2,
+            "site": "http://jpost.com",
+            "authors": "unknown",
+            "title": "Middle Israel: Time to shed the complex of \u2018yeridah\u2019",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 2,
+            "url": "https://en.globes.co.il/en/article-amazon-halts-free-shipments-to-israel-1001322732",
+            "val": 2,
+            "site": "http://globes.co.il",
+            "authors": "unknown",
+            "title": "Amazon halts free shipping to Israel",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "2020-03-22 09:40:00+00:00",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 3,
+            "url": "https://www.ynetnews.com/business/article/by5ba11dfl",
+            "val": 2,
+            "site": "http://ynetnews.com",
+            "authors": "unknown",
+            "title": "Israel ranked eighth most expensive country in the world",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "2020-02-05 17:03:41.162795+00:00",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "Ynetnews, Jerusalem Post"
+        },
+        {
+            "id": 4,
+            "url": "https://www.ynetnews.com/articles/0,7340,l-4633784,00.html",
+            "val": 2,
+            "site": "http://ynetnews.com",
+            "authors": "Published",
+            "title": "More than 41% of Israelis in overdraft and half cite high cost of living, study finds",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "2015-03-05 17:23:00+00:00",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "Ynetnews"
+        },
+        {
+            "id": 5,
+            "url": "https://www.jpost.com/opinion/the-jerusalem-cable-car-610932",
+            "val": 2,
+            "site": "http://jpost.com",
+            "authors": "unknown",
+            "title": "The Jerusalem cable car",
+            "date_added": "2020-07-05 19:36:00.793582+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 6,
+            "url": "https://www.jpost.com/paywalllogin?returnurl=%2f",
+            "val": 1,
+            "site": "https://www.jpost.com",
+            "authors": "unknown",
+            "title": "The Jerusalem Post | Premium",
+            "date_added": "2020-07-05 20:12:25.835580+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": false,
+            "matched_source_sites": [],
+            "matched_keywords": "Jerusalem Post"
+        },
+        {
+            "id": 7,
+            "url": "https://www.haaretz.com/middle-east-news/.premium-annexation-apologists-most-misleading-claims-and-how-to-debunk-them-1.8967570",
+            "val": 2,
+            "site": "http://timesofisrael.com/",
+            "authors": "Maya Rosen, Required Field",
+            "title": "Annexation apologists\u2019 most misleading claims",
+            "date_added": "2020-07-05 18:52:09.244522+00:00",
+            "date_published": "None",
+            "is_referring": true,
+            "is_source": true,
+            "matched_source_sites": [
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/opinion/.premium-the-three-most-common-mistakes-about-the-annexation-1.8893292"
+                },
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/opinion/.premium-annexation-is-the-israeli-settlers-real-estate-dream-come-true-1.8865898"
+                },
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/israel-news/wary-israel-tried-to-conceal-east-jerusalem-s-annexation-in-67-1.5460969"
+                },
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/israel-news/.premium-netanyahu-says-palestinians-in-jordan-valley-won-t-get-citizenship-after-annexation-1.8879420"
+                }
+            ],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 8,
+            "url": "https://www.haaretz.com/opinion/.premium-the-three-most-common-mistakes-about-the-annexation-1.8893292",
+            "val": 2,
+            "site": "http://haaretz.com",
+            "authors": "Michael Sfard, Required Field",
+            "title": "The three most commonly held misconceptions about Israel's annexation plan - Opinion - Israel News",
+            "date_added": "2020-07-05 18:52:09.244522+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "Israel Hayom"
+        },
+        {
+            "id": 9,
+            "url": "https://www.haaretz.com/opinion/.premium-annexation-is-the-israeli-settlers-real-estate-dream-come-true-1.8865898",
+            "val": 2,
+            "site": "http://haaretz.com",
+            "authors": "Michael Sfard, Required Field",
+            "title": "Annexation is the Israeli settlers' real estate dream come true - Opinion - Israel News",
+            "date_added": "2020-07-05 18:52:09.244522+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "haaretz"
+        },
+        {
+            "id": 10,
+            "url": "https://www.haaretz.com/israel-news/wary-israel-tried-to-conceal-east-jerusalem-s-annexation-in-67-1.5460969",
+            "val": 2,
+            "site": "http://haaretz.com",
+            "authors": "Nir Hasson, Required Field",
+            "title": "Wary Israel tried to conceal East Jerusalem's annexation in 1967, documents reveal",
+            "date_added": "2020-07-05 18:52:09.244522+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 11,
+            "url": "https://www.haaretz.com/israel-news/.premium-netanyahu-says-palestinians-in-jordan-valley-won-t-get-citizenship-after-annexation-1.8879420",
+            "val": 2,
+            "site": "http://haaretz.com",
+            "authors": "Required Field",
+            "title": "Netanyahu says Palestinians in Jordan Valley won't get citizenship after annexation",
+            "date_added": "2020-07-05 18:52:09.244522+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "Israel Hayom"
+        },
+        {
+            "id": 12,
+            "url": "https://www.haaretz.com/us-news/.premium-when-my-daughter-called-israel-an-apartheid-state-i-objected-now-i-m-not-so-sure-1.8970682",
+            "val": 1,
+            "site": "http://timesofisrael.com/",
+            "authors": "Allen S. Weiner, Required Field",
+            "title": "When my daughter called Israel an apartheid state, I objected. Now, I'm not so sure",
+            "date_added": "2020-07-05 20:33:59.981671+00:00",
+            "date_published": "None",
+            "is_referring": true,
+            "is_source": false,
+            "matched_source_sites": [
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/misc/tags/TAG-israel-settlements-1.5598942"
+                },
+                {
+                    "matched": true,
+                    "site": "http://haaretz.com",
+                    "url": "https://www.haaretz.com/middle-east-news/.premium-annexation-apologists-most-misleading-claims-and-how-to-debunk-them-1.8967570"
+                }
+            ],
+            "matched_keywords": "unknown"
+        },
+        {
+            "id": 13,
+            "url": "https://www.haaretz.com/misc/tags/tag-israel-settlements-1.5598942",
+            "val": 2,
+            "site": "http://haaretz.com",
+            "authors": "By Nbsp, If Content.Reportingfrom, Content.Reportingfrom",
+            "title": "Israel settlements",
+            "date_added": "2020-07-05 20:33:59.981671+00:00",
+            "date_published": "None",
+            "is_referring": false,
+            "is_source": true,
+            "matched_source_sites": [],
+            "matched_keywords": "unknown"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 0,
+            "dashed": true
+        },
+        {
+            "source": 2,
+            "target": 0,
+            "dashed": true
+        },
+        {
+            "source": 3,
+            "target": 0,
+            "dashed": true
+        },
+        {
+            "source": 4,
+            "target": 0,
+            "dashed": true
+        },
+        {
+            "source": 5,
+            "target": 0,
+            "dashed": true
+        },
+        {
+            "source": 8,
+            "target": 7,
+            "dashed": true
+        },
+        {
+            "source": 9,
+            "target": 7,
+            "dashed": true
+        },
+        {
+            "source": 10,
+            "target": 7,
+            "dashed": true
+        },
+        {
+            "source": 11,
+            "target": 7,
+            "dashed": true
+        },
+        {
+            "source": 13,
+            "target": 12,
+            "dashed": true
+        },
+        {
+            "source": 7,
+            "target": 12,
+            "dashed": false
+        }
+    ]
+}
