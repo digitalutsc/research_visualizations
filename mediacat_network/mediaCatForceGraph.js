@@ -30,7 +30,8 @@ function drawNetwork(dataFile){
             },
             html: '<div style="padding:10px;font-size:12px;color:black;"> Pan and zoom using the mouse \
             </div> <div style="padding:10px;font-size:12px;color:black;"> Left click to see the description of the node </div> \
-            <div style="padding:10px;font-size:12px;color:black;"> Right click to zoom and focus on the node</div>',
+            <div style="padding:10px;font-size:12px;color:black;"> Right click to zoom and focus on the node</div>\
+            <div style="padding:10px;font-size:12px;color:black;"> Size of node represents # of time it got cited </div>',
         });
         //Show the window
         frame.showFrameComponent('minimizeButton');
