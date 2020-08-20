@@ -1,5 +1,5 @@
 //------------------------Data File------------------------------------------------
-//var dataFile = "mediaCatData.json";
+//var dataFile = "url_mediaCatData.json";
 //var dataFile = "test_mediaCatData.json";
 var dataFile = "domain_mediaCatData.json"
 
