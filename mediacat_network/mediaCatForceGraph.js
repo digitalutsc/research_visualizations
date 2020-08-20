@@ -45,10 +45,7 @@ function drawNetwork(dataFile){
                 if (dataFile == diagramBySite){return node.val/40}
                 else {return node.val}
             })
-            .nodeAutoColorBy(node => {
-                if (dataFile == diagramBySite){return node.site}
-                else {return node.url}
-            })
+            .nodeAutoColorBy(node => node.site)
             .nodeLabel(node => {
                 if (dataFile == diagramBySite){return node.site}
                 else {return node.title}
