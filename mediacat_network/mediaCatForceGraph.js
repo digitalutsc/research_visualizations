@@ -1,7 +1,8 @@
 //------------------------Data File------------------------------------------------
 //var dataFile = "url_mediaCatData.json";
 //var dataFile = "test_mediaCatData.json";
-var dataFile = "domain_mediaCatData.json"
+//var dataFile = "keywords_mediaCatData.json";
+var dataFile = "domain_mediaCatData.json";
 
 drawNetwork(dataFile);
 
@@ -16,7 +17,8 @@ function drawNetwork(dataFile){
         const arrowLength = 15;
         const cooldown = 30000;
         const windowWidth = 800;
-        const diagramBySite = "domain_mediaCatData.json";
+        const diagramByDomain = "domain_mediaCatData.json";
+        const diagramByKeyword = "keywords_mediaCatData.json";
 
         //------------------------Floating Window------------------------------------------
         const jsFrame = new JSFrame();
@@ -31,7 +33,8 @@ function drawNetwork(dataFile){
             html: '<div style="padding:10px;font-size:12px;color:black;"> Pan and zoom using the mouse \
             </div> <div style="padding:10px;font-size:12px;color:black;"> Left click to see the description of the node </div> \
             <div style="padding:10px;font-size:12px;color:black;"> Right click to zoom and focus on the node</div>\
-            <div style="padding:10px;font-size:12px;color:black;"> Size of node represents # of time it got cited </div>',
+            <div style="padding:10px;font-size:12px;color:black;"> Size of node represents # of time it got cited </div>\
+            <div style="padding:10px;font-size:12px;color:black;"> Same colour represents same domain </div>',
         });
         //Show the window
         frame.showFrameComponent('minimizeButton');
@@ -43,23 +46,36 @@ function drawNetwork(dataFile){
 
             //------------------------Node section------------------------------------------
             .nodeVal(node => {
-                if (dataFile == diagramBySite){return node.val/40}
+                if (dataFile == diagramByDomain){return node.val/40+1}
+                else if (dataFile == diagramByKeyword) {return node.val/50}
                 else {return node.val}
             })
-            .nodeAutoColorBy(node => node.site)
+            .nodeAutoColorBy(node => {
+                if (dataFile == diagramByKeyword) {return node.keyword}
+                else {return node.site}
+            })
             .nodeLabel(node => {
-                if (dataFile == diagramBySite){return node.site}
+                if (dataFile == diagramByDomain){return node.site}
+                if (dataFile == diagramByKeyword){return node.keyword}
                 else {return node.title}
             })
             .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
             // click to open pop up window for detail description
             .onNodeClick(
             node => {
-                if (dataFile == diagramBySite){
+                if (dataFile == diagramByDomain){
                     swal.fire({
                         width: windowWidth,
                         title: node.site + " ("+ node.val + " URLs)", 
                         html: 'You can open this site <a href="'+ node.site +'"> here </a>',
+                        showCloseButton: true,
+                        showConfirmButton: false,
+                    });
+                }
+                else if (dataFile == diagramByKeyword){
+                    swal.fire({
+                        width: windowWidth,
+                        title: node.keyword,
                         showCloseButton: true,
                         showConfirmButton: false,
                     });
@@ -94,11 +110,12 @@ function drawNetwork(dataFile){
             .linkDirectionalArrowLength(arrowLength)
             .linkLineDash(link => link.dashed && [dashLen, gapLen])
             .linkWidth(link =>{
-                if (dataFile == diagramBySite){return link.weight/35 +1}
+                if (dataFile == diagramByDomain){return link.weight/90 +1}
                 else{return linkWidth}
             })
 
             .cooldownTime(cooldown)
+            .linkCurvature(0.2)
 
             // draw the diagram
             .graphData(data);
