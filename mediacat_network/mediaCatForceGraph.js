@@ -1,14 +1,32 @@
 //------------------------Data File------------------------------------------------
-//var dataFile = "url_mediaCatData.json";
-//var dataFile = "test_mediaCatData.json";
-//var dataFile = "keywords_mediaCatData.json";
 var dataFile = "domain_mediaCatData.json";
+//var dataFile = "domain2_mediaCatData.json"
+
 
 drawNetwork(dataFile);
 
 function drawNetwork(dataFile){
 
     fetch(dataFile).then(res => res.json()).then(data => {
+
+        data.links.forEach(link => {
+            const a = data.nodes[link.source];
+            const b = data.nodes[link.target];
+            !a.neighbors && (a.neighbors = []);
+            !b.neighbors && (b.neighbors = []);
+            a.neighbors.push(b);
+            b.neighbors.push(a);
+      
+            !a.links && (a.links = []);
+            !b.links && (b.links = []);
+            a.links.push(link);
+            b.links.push(link);
+          });
+
+        const highlightNodes = new Set();
+        const highlightLinks = new Set();
+        let hoverNode = null;
+
         const elem = document.getElementById('graph');
     
         const dashLen = 3;
@@ -17,8 +35,9 @@ function drawNetwork(dataFile){
         const arrowLength = 15;
         const cooldown = 30000;
         const windowWidth = 800;
-        const diagramByDomain = "domain_mediaCatData.json";
-        const diagramByKeyword = "keywords_mediaCatData.json";
+
+
+        const NODE_R = 5;
 
         //------------------------Floating Window------------------------------------------
         const jsFrame = new JSFrame();
@@ -45,25 +64,41 @@ function drawNetwork(dataFile){
             .backgroundColor('#101020')
 
             //------------------------Node section------------------------------------------
-            .nodeVal(node => {
-                if (dataFile == diagramByDomain){return node.val/40+1}
-                else if (dataFile == diagramByKeyword) {return node.val/50}
-                else {return node.val}
+            .nodeVal(node => {return node.val/40+1})
+            .nodeAutoColorBy(node => {return node.site})
+            .nodeLabel(node => { node.site})
+            .onNodeHover(node => {
+                highlightNodes.clear();
+                highlightLinks.clear();
+                if (node) {
+                  highlightNodes.add(node);
+                  node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+                  node.links.forEach(link => highlightLinks.add(link));
+                }
+                hoverNode = node || null;
+                elem.style.cursor = node ? '-webkit-grab' : null;
             })
-            .nodeAutoColorBy(node => {
-                if (dataFile == diagramByKeyword) {return node.keyword}
-                else {return node.site}
+            .onLinkHover(link => {
+                highlightNodes.clear();
+                highlightLinks.clear();
+        
+                if (link) {
+                  highlightLinks.add(link);
+                  highlightNodes.add(link.source);
+                  highlightNodes.add(link.target);
+                }
+              })
+            .nodeCanvasObjectMode(node => highlightNodes.has(node) ? 'before' : undefined)
+            .nodeCanvasObject((node, ctx) => {
+                // add ring just for highlighted nodes
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, NODE_R * 1.4, 0, 2 * Math.PI, false);
+                ctx.fillStyle = node === hoverNode ? 'red' : 'orange';
+                ctx.fill()
             })
-            .nodeLabel(node => {
-                if (dataFile == diagramByDomain){return node.site}
-                if (dataFile == diagramByKeyword){return node.keyword}
-                else {return node.title}
-            })
-            .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
             // click to open pop up window for detail description
             .onNodeClick(
             node => {
-                if (dataFile == diagramByDomain){
                     swal.fire({
                         width: windowWidth,
                         title: node.site + " ("+ node.val + " URLs)", 
@@ -71,29 +106,9 @@ function drawNetwork(dataFile){
                         showCloseButton: true,
                         showConfirmButton: false,
                     });
-                }
-                else if (dataFile == diagramByKeyword){
-                    swal.fire({
-                        width: windowWidth,
-                        title: node.keyword,
-                        showCloseButton: true,
-                        showConfirmButton: false,
-                    });
-                }
-                else{
-                    swal.fire({
-                        width: windowWidth,
-                        title: node.title,
-                        html: '<p>You can open this site <a href="'+ node.site +'"> here </a></p>',
-                        footer: '<p>Authors: '+ node.authors 
-                            +'<br> Date Published: '+ node.date_published 
-                            +'<br>Matched Keywords: '+node.matched_keywords
-                            +'<br># of referring sites: '+ (node.val-1) +'</p>',
-                        showCloseButton: true,
-                        showConfirmButton: false,
-                    });
-                }
-            })
+                })
+            .linkDirectionalParticles(4)
+            .linkDirectionalParticleWidth(link => highlightLinks.has(link) ? 4 : 0)
             // right click to focus on node
             .onNodeRightClick(node => {
                 // Center/zoom on node
@@ -109,16 +124,12 @@ function drawNetwork(dataFile){
             .linkColor(() => 'rgba(255,255,255,0.2)')
             .linkDirectionalArrowLength(arrowLength)
             .linkLineDash(link => link.dashed && [dashLen, gapLen])
-            .linkWidth(link =>{
-                if (dataFile == diagramByDomain){return link.weight/90 +1}
-                else{return linkWidth}
-            })
+            .linkWidth(link =>{return link.weight/90 +1})
 
             .cooldownTime(cooldown)
             .linkCurvature(0.2)
 
             // draw the diagram
             .graphData(data);
-
         });
 }
