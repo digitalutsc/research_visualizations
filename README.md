@@ -1,7 +1,7 @@
 # Table of Contents
-- [Network Graph: D3 force directed graph](https://github.com/digitalutsc/research_visualizations#network-graph-d3-force-directed-graph): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/Network%20Diagram)
-- [Kinship Diagram: D3-dag](https://github.com/digitalutsc/research_visualizations#kinship-diagram-d3-dag): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/Kinship%20Diagram)
-- [MediaCat Network: force-graph](https://github.com/digitalutsc/research_visualizations#mediacat-network-force-graph): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/mediacat_network)
+- [Network Graph: D3 force directed graph](https://github.com/digitalutsc/research_visualizations#network-graph-d3-force-directed-graph) [(open folder here)](https://github.com/digitalutsc/research_visualizations/tree/master/Network%20Diagram)
+- [Kinship Diagram: D3-dag](https://github.com/digitalutsc/research_visualizations#kinship-diagram-d3-dag) [(open folder here)](https://github.com/digitalutsc/research_visualizations/tree/master/Kinship%20Diagram)
+- [MediaCat Network: force-graph](https://github.com/digitalutsc/research_visualizations#mediacat-network-force-graph) [(open folder here)](https://github.com/digitalutsc/research_visualizations/tree/master/mediacat_network)
 
 # Network Graph: D3 force directed graph
 
@@ -54,3 +54,12 @@ Code based on [force-graph](https://github.com/vasturiano/force-graph) by vastur
 - Tooltip
 - Left click on nodes for information box
 - Right click on nodes to zoom and focus
+
+### Files
+- [mediaCatForcegraphByUrl.html](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/mediaCatForceGraphByUrl.html): An HTML file for visualization #1, launch the JS file below
+- [url_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatForceGraph.js): A JS file where the main code goes
+- [url_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatData.json): Data file for visualization #1, each node represent one url/article
+
+- [mediaCatForceGraphByDomain.html](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/mediaCatForceGraphByDomain.html): An HTML file for visualization #2, launch the JS file below
+- [domain_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatForceGraph.js): A JS file where the main codes goes
+- [domain_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatData.json): Data file for visualization #2, each node represent one domain site
