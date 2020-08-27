@@ -1,3 +1,8 @@
+# Table of Contents
+- [Network Graph: D3 force directed graph](https://github.com/digitalutsc/research_visualizations#network-graph-d3-force-directed-graph): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/Network%20Diagram)
+- [Kinship Diagram: D3-dag](https://github.com/digitalutsc/research_visualizations#kinship-diagram-d3-dag): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/Kinship%20Diagram)
+- [MediaCat Network: force-graph](https://github.com/digitalutsc/research_visualizations#mediacat-network-force-graph): [open folder here](https://github.com/digitalutsc/research_visualizations/tree/master/mediacat_network)
+
 # Network Graph: D3 force directed graph
 
 ### Features:
@@ -16,8 +21,9 @@
   - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
 
 
+
 # Kinship Diagram: D3-dag
-This code is based on [js_family_tree](https://github.com/BenPortner/js_family_tree) by BenPortner
+Code based on [js_family_tree](https://github.com/BenPortner/js_family_tree) by BenPortner
 
 ### Features:
 - Dragoman icon indicate whether the person is a dragoman
@@ -39,3 +45,12 @@ This code is based on [js_family_tree](https://github.com/BenPortner/js_family_t
 - [construct data](https://github.com/digitalutsc/dragomans_visualizations/tree/master/Kinship%20Diagram/construct%20data): Used to generate data for kinship diagrams
 
 
+
+# MediaCat Network: force-graph
+Code based on [force-graph](https://github.com/vasturiano/force-graph) by vasturiano
+
+### Features:
+- Pan & zoom using mouse
+- Tooltip
+- Left click on nodes for information box
+- Right click on nodes to zoom and focus
