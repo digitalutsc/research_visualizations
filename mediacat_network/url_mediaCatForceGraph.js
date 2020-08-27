@@ -2,7 +2,8 @@
 var dataFile = "url_mediaCatData.json";
 //var dataFile = "test_mediaCatData.json";
 //var dataFile = "keywords_mediaCatData.json";
-//var dataFile = "domain_mediaCatData.json";
+//var dataFile = "url_fewer_nodes_mediaCatData.json"
+
 
 drawNetwork(dataFile);
 
@@ -84,7 +85,7 @@ function drawNetwork(dataFile){
                     swal.fire({
                         width: windowWidth,
                         title: node.title,
-                        html: '<p>You can open this site <a href="'+ node.site +'"> here </a></p>',
+                        html: '<p>You can open this URL <a href="'+ node.url +'" target="_blank"> here </a></p>',
                         footer: '<p>Authors: '+ node.authors 
                             +'<br> Date Published: '+ node.date_published 
                             +'<br>Matched Keywords: '+node.matched_keywords
