@@ -60,7 +60,7 @@ function drawNetwork(dataFile){
                     swal.fire({
                         width: windowWidth,
                         title: node.site + " ("+ node.val + " URLs)", 
-                        html: '<p>You can open this site <a href="'+ node.site +'"> here</a>' 
+                        html: '<p>You can open this site <a href="'+ node.site +'" target="_blank"> here</a>' 
                         + '<br><br>Referring Sites: ' + node.referring_domain + '</p>',
                         showCloseButton: true,
                         showConfirmButton: false,
