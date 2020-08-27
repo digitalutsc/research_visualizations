@@ -1,6 +1,5 @@
 //------------------------Data File------------------------------------------------
 var dataFile = "domain_mediaCatData.json";
-//var dataFile = "domain2_mediaCatData.json"
 
 
 drawNetwork(dataFile);
@@ -8,24 +7,6 @@ drawNetwork(dataFile);
 function drawNetwork(dataFile){
 
     fetch(dataFile).then(res => res.json()).then(data => {
-
-        data.links.forEach(link => {
-            const a = data.nodes[link.source];
-            const b = data.nodes[link.target];
-            !a.neighbors && (a.neighbors = []);
-            !b.neighbors && (b.neighbors = []);
-            a.neighbors.push(b);
-            b.neighbors.push(a);
-      
-            !a.links && (a.links = []);
-            !b.links && (b.links = []);
-            a.links.push(link);
-            b.links.push(link);
-          });
-
-        const highlightNodes = new Set();
-        const highlightLinks = new Set();
-        let hoverNode = null;
 
         const elem = document.getElementById('graph');
     
@@ -64,51 +45,29 @@ function drawNetwork(dataFile){
             .backgroundColor('#101020')
 
             //------------------------Node section------------------------------------------
+            // node size
             .nodeVal(node => {return node.val/40+1})
-            .nodeAutoColorBy(node => {return node.site})
-            .nodeLabel(node => { node.site})
-            .onNodeHover(node => {
-                highlightNodes.clear();
-                highlightLinks.clear();
-                if (node) {
-                  highlightNodes.add(node);
-                  node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
-                  node.links.forEach(link => highlightLinks.add(link));
-                }
-                hoverNode = node || null;
-                elem.style.cursor = node ? '-webkit-grab' : null;
-            })
-            .onLinkHover(link => {
-                highlightNodes.clear();
-                highlightLinks.clear();
-        
-                if (link) {
-                  highlightLinks.add(link);
-                  highlightNodes.add(link.source);
-                  highlightNodes.add(link.target);
-                }
-              })
-            .nodeCanvasObjectMode(node => highlightNodes.has(node) ? 'before' : undefined)
-            .nodeCanvasObject((node, ctx) => {
-                // add ring just for highlighted nodes
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, NODE_R * 1.4, 0, 2 * Math.PI, false);
-                ctx.fillStyle = node === hoverNode ? 'red' : 'orange';
-                ctx.fill()
-            })
+            // node colour
+            //.nodeAutoColorBy(node => {return node.site})
+            .nodeColor(node => {return node.color})
+            // mouseover to show site name
+            .nodeLabel(node => {return node.site})
+            .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
+            
             // click to open pop up window for detail description
             .onNodeClick(
-            node => {
+                node => {
                     swal.fire({
                         width: windowWidth,
                         title: node.site + " ("+ node.val + " URLs)", 
-                        html: 'You can open this site <a href="'+ node.site +'"> here </a>',
+                        html: '<p>You can open this site <a href="'+ node.site +'"> here</a>' 
+                        + '<br><br>Referring Sites: ' + node.referring_domain + '</p>',
                         showCloseButton: true,
                         showConfirmButton: false,
                     });
                 })
-            .linkDirectionalParticles(4)
-            .linkDirectionalParticleWidth(link => highlightLinks.has(link) ? 4 : 0)
+            .linkDirectionalParticles(1)
+            .linkDirectionalParticleSpeed(0.007)
             // right click to focus on node
             .onNodeRightClick(node => {
                 // Center/zoom on node
@@ -131,5 +90,13 @@ function drawNetwork(dataFile){
 
             // draw the diagram
             .graphData(data);
+        
+            // set link length
+            Graph.d3Force('center', null);
+            Graph.d3Force('link').distance(link => link.weight/50*9 + 80);
+
+            // fit to canvas when engine stops
+            Graph.onEngineStop(() => Graph.zoomToFit(400));
+
         });
 }
