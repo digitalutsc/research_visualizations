@@ -15,10 +15,10 @@
 
 ### Files
 - [forceDirectedGraph.html](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirectedGraph.html): An HTML file that launch the JS file below
-- [forceDirected.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirected.js): A JS file where the main code goes
-- Data:
-  - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
-  - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
+  - [forceDirected.js](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/forceDirected.js): A JS file where the main code goes
+  - Data:
+    - [viz1.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz1.json) (53 dragoman families): Figure 1.3, Intermarriage across Istanbul’s dragomanate, ca. 1570-1720
+    - [viz2.json](https://github.com/digitalutsc/dragomans_visualizations/blob/master/Network%20Diagram/viz2.json) (29 dragoman families): Figure 1.2, Families represented in the Venetian dragomanate, ca. 1570-1720
 
 
 
@@ -57,10 +57,10 @@ Code based on [force-graph](https://github.com/vasturiano/force-graph) by vastur
 
 ### Files
 - [mediaCatForcegraphByUrl.html](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/mediaCatForceGraphByUrl.html): An HTML file for visualization #1, launch the JS file below
-- [url_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatForceGraph.js): A JS file where the main code goes
-- [url_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatData.json): Data file for visualization #1, each node represent one url/article
+  - [url_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatForceGraph.js): A JS file where the main code goes
+  - [url_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/url_mediaCatData.json): Data file for visualization #1, each node represent one url/article
 
 - [mediaCatForceGraphByDomain.html](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/mediaCatForceGraphByDomain.html): An HTML file for visualization #2, launch the JS file below
-- [domain_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatForceGraph.js): A JS file where the main codes goes
-- [domain_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatData.json): Data file for visualization #2, each node represent one domain site
+  - [domain_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatForceGraph.js): A JS file where the main codes goes
+  - [domain_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatData.json): Data file for visualization #2, each node represent one domain site
 - [convert](https://github.com/digitalutsc/research_visualizations/tree/master/mediacat_network/convert): Used to generate data for Mediacat force-graphs
