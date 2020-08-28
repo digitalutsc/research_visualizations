@@ -63,3 +63,4 @@ Code based on [force-graph](https://github.com/vasturiano/force-graph) by vastur
 - [mediaCatForceGraphByDomain.html](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/mediaCatForceGraphByDomain.html): An HTML file for visualization #2, launch the JS file below
 - [domain_mediaCatForceGraph.js](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatForceGraph.js): A JS file where the main codes goes
 - [domain_mediaCatData.json](https://github.com/digitalutsc/research_visualizations/blob/master/mediacat_network/domain_mediaCatData.json): Data file for visualization #2, each node represent one domain site
+- [convert](https://github.com/digitalutsc/research_visualizations/tree/master/mediacat_network/convert): Used to generate data for Mediacat force-graphs
