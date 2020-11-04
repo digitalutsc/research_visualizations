@@ -53,11 +53,11 @@ function showKinshipDiagram(treeData){
         // Set the dimensions and margins of the diagram
         var screen_width = 1120,
             screen_height = 700;
-        
+
         //base path for diagrams
         var basePath = "https://dragomans.digitalscholarship.utsc.utoronto.ca/sites/default/files/";
         // var basePath = `portraits/`
-        
+
         var kinDiagram1 = "I0086",
             kinDiagram2 = "I0163",
             kinDiagram3 = "I0117"
@@ -65,10 +65,10 @@ function showKinshipDiagram(treeData){
             kinDiagram3_3 = "I0504",
             kinDiagram3_4 = "I0505";
 
-        var rectHeight = 35, 
+        var rectHeight = 35,
             rectWidth = 123;
 
-        var nodeX = (rectWidth/5 + 15)*-1, 
+        var nodeX = (rectWidth/5 + 15)*-1,
             nodeY = (rectHeight/2 )*-1;
 
         // helper variables
@@ -98,7 +98,7 @@ function showKinshipDiagram(treeData){
                     if (d.data.birthyear != "?" && d.data.deathyear != "?"){
                         content += `<br>` + d.data.birthyear +` - ` + d.data.deathyear
                     }
-                    else {content += `<br> UNKNOWN`}
+                    else {content += `<br> Dates unknown`}
 
                     content += `<br> ID: ` + d.data.id + `<br></span>`;
                     if (d.data.class.includes("showPortrait") == true && d.data.class.includes("hasPortrait") == true){
@@ -197,7 +197,7 @@ function showKinshipDiagram(treeData){
         uncollapse(root);
         if (data.start == kinDiagram1){uncollapseFor1();}
         if (data.start == kinDiagram2){uncollapseFor2();}
-        if (data.start == kinDiagram3){uncollapseFor3();} 
+        if (data.start == kinDiagram3){uncollapseFor3();}
         update(root);
 
         function uncollapseFor1(){
@@ -273,7 +273,7 @@ function showKinshipDiagram(treeData){
         // uncollapse a node
         function uncollapse(d, make_roots) {
             if (d == undefined) return;
-            // neighbor nodes that are already visible (happens when 
+            // neighbor nodes that are already visible (happens when
             // circles occur): make connections, save them to
             // destroy / rebuild on collapse
             var extended_neighbors = d.neighbors.filter(n => n.visible)
@@ -290,7 +290,7 @@ function showKinshipDiagram(treeData){
                 }
             )
 
-            // neighbor nodes that are invisible: make visible, make connections, 
+            // neighbor nodes that are invisible: make visible, make connections,
             // add root nodes, add to inserted_nodes
             var collapsed_neighbors = d.neighbors.filter(n => !n.visible);
             collapsed_neighbors.forEach(
@@ -684,7 +684,7 @@ function showKinshipDiagram(treeData){
             return basePath + "icon_dragoman_hat.png";});
         svg.append("text").attr("x", noteX + 295 + icon_width).attr("y", textY + 6*alignment).text("Dragoman").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
-        // legend for note 
+        // legend for note
         svg.append("text").attr("x", noteX).attr("y", textY + 8*alignment).text("Click on individual names with dotted borders to expand the view").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
         svg.append("text").attr("x", noteX).attr("y", textY + 9*alignment).text("Pan and zoom using the mouse").style("font-size", "15px").attr("alignment-baseline","middle").style('fill', 'black');
 
@@ -711,5 +711,5 @@ function showKinshipDiagram(treeData){
         svg.append("rect").attr("x", rectX).attr("y", rectY + 9*alignment).attr("width",width).attr("height",height).style("fill","#374E99");
         svg.append("rect").attr("x", rectX).attr("y", rectY + 10*alignment).attr("width",width).attr("height",height).style("fill","#C0C0C0");
         */
-    
+
 })}
