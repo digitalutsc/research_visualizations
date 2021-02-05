@@ -1,0 +1,23 @@
+{
+  "@id": "Toronto",
+  "about": {
+    "@type": "City",
+    "name": "Toronto, ON",
+    "description": "The largest city in Canada, and the capital on Ontario",
+    "population": {
+      "metro": "5,928,903",
+      "proper": "2,934,582",
+      "greater": "7,822,011"
+    }
+  },
+  "buildings": {
+    "CN Tower": "553m",
+  	"Downtown": [
+      {
+        "First Canadian Place": "298m",
+        "The St. Regis Toronto": "277m",
+        "Scotia Plaza": "275m"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>jsonld-vis example</title>
+  </head>
+  <body>
+	<div>
+		<h2>
+			Json Visualization examples
+		</h2>
+	</div>
+	  
+	<div class="desc">
+		Specification details:
+		<ul>
+			<li>w (width): Width of graph (gray box)</li>
+			<li>h (height): Height of graph (gray box)</li>
+			<li>maxLabelWidth: Maximum distance horizonatally between nodes (as well as the limits of the graph)</li>
+			<li>minRadius: Minumum radius of nodes</li>
+			<li>transitionDuration: Time for animation to take, in milliseconds</li>
+			<li>scalingFactor: Change in size for each node layer (I think)</li>
+		</ul>
+		<p>
+			Another specification for each of these graphs is overflow-x, which is currently set to scroll. This means when 
+			the graph is wider than the graph limits (the gray box), you will be able to scroll to see the rest of the graph.
+			<br><br>
+			This can also be set to auto, which simply expands the graph's limit. (It can look a bit wierd if it extends way off
+			to the right hand side of the page)
+			To change this, go into styles.css and change the overflow-x property in .graph.
+		</p>
+	</div>
+    <div class="container">
+	  <!-- Give ID to each graph  -->
+      <div id="graph-tor" class="graph">
+		<h4>
+			Toronto Example Graph
+		</h4>
+		<p>
+			<!-- Graph specifications -->
+			Specifications:
+			w: 700, h: 300, maxLabelWidth: 200, minRadius: 5,
+			transitionDuration: 1000, scalingFactor: 1
+		</p>
+	  </div>
+	  <div id="graph-cal" class="graph">
+		<h4>
+			Calgary Example Graph
+		</h4>
+		<p>
+			<!-- Graph specifications -->
+			Specifications:
+			w: 1000, h: 600, maxLabelWidth: 300, minRadius: 25,
+			transitionDuration: 750, scalingFactor: 2
+		</p>
+	  </div>
+	  <div id="graph-van" class="graph">
+		<h4>
+			Vancouver Example Graph
+		</h4>
+		<p>
+			<!-- Graph specifications -->
+			Specifications:
+			w: 1000, h: 600, maxLabelWidth: 350, minRadius: 10,
+			transitionDuration: 120, scalingFactor: 5
+		</p>
+	  </div>
+    </div>
+	  
+	<!-- Import JS scripts -->
+    <script type="text/javascript" src="./example.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
