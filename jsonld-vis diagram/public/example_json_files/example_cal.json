@@ -1,0 +1,19 @@
+{
+  "@id": "Calgary",
+
+  "about": {
+    "@type": "City",
+    "name": "Calgary, AB",
+    "description": "The largest city in the Canadian prairies",
+    "buildings": {
+    	"Brookfield Place East": "247m",
+        "The Bow": "238m",
+        "Telus Sky": "222m",
+		"Suncor Energy Centre West": "215m",
+        "Eighth Avenue Place East": "212m",
+        "Bankers Hall - East": "197m",
+		"Centennial Place I": "182m",
+        "Eighth Avenue Place West": "177m"
+    }
+  }
+}

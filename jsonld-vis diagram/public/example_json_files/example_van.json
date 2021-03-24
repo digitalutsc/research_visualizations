@@ -1,0 +1,29 @@
+{
+  "@id": "Vancouver",
+  "name": "Vancouver",
+  "about": {
+    "@type": "City",
+    "name": "Vancouver, BC",
+    "description": "A large city in the Canadian Pacific Northwest.",
+    "population": {
+      "metro": "2,463,431",
+      "proper": "675,218",
+      "greater": "2,832,729"
+    }
+  },
+  "council": {
+    "mayor": "Kennedy Stewart",
+  	"councillers": [
+      {
+        "counciller 1": "Mr potato head",
+        "counciller 2": "Joe Biden",
+        "counciller 3": "Andrew Yang"
+      },
+      {
+        "counciller A": "Justin Trudeau",
+        "counciller B": "Jagmeet Singh",
+        "counciller C": "Erin Otoole"
+      }
+    ]
+  }
+}
