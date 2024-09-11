@@ -9,7 +9,7 @@
     "cookie-parser": "~1.4.4",
     "d3": "^7.6.1",
     "debug": "~2.6.9",
-    "express": "~4.18.2",
+    "express": "~4.20.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonld-vis": "^2.1.0",
